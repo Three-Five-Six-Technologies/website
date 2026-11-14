@@ -42,7 +42,7 @@
       <form id="pq-form" onsubmit="return false"><fieldset class="pq" data-i="0"><legend>How many people sign in to Business Central?</legend><p class="why">This decides how many separate roles are worth keeping up.</p><div class="pq-opts"><label class="pq-opt"><input type="radio" name="size" value="S"><span><b>1 to 10</b><small>A few people who each wear several hats</small></span></label><label class="pq-opt"><input type="radio" name="size" value="M"><span><b>11 to 50</b><small>Departments are starting to form</small></span></label><label class="pq-opt"><input type="radio" name="size" value="L"><span><b>More than 50</b><small>Several departments, maybe several companies</small></span></label></div></fieldset><fieldset class="pq" data-i="1"><legend>When someone is out for a week, what happens to their work?</legend><p class="why">If coworkers routinely fill in, very narrow roles will get in their way.</p><div class="pq-opts"><label class="pq-opt"><input type="radio" name="cover" value="Y"><span><b>A coworker picks it up in Business Central</b><small>People regularly post each other's documents</small></span></label><label class="pq-opt"><input type="radio" name="cover" value="N"><span><b>It waits, or a planned backup handles it</b><small>Jobs are clearly separated</small></span></label></div></fieldset><fieldset class="pq" data-i="2"><legend>What does your company mostly do in Business Central?</legend><p class="why">This picks the starter roles that get loaded.</p><div class="pq-opts"><label class="pq-opt"><input type="radio" name="biz" value="D"><span><b>Buy, stock and ship products</b><small>Distribution or wholesale: order desk, warehouse, purchasing</small></span></label><label class="pq-opt"><input type="radio" name="biz" value="O"><span><b>Run an office or provide services</b><small>Bookkeeping, billing and office staff</small></span></label><label class="pq-opt"><input type="radio" name="biz" value="G"><span><b>Something else</b><small>Manufacturing, a mix, or anything else. You start from a general set of roles.</small></span></label></div></fieldset><fieldset class="pq" data-i="3"><legend>A vendor emails to say their bank account changed. Who should be able to update it?</legend><p class="why">Fake bank-change emails are one of the most common ways companies lose money.</p><div class="pq-opts"><label class="pq-opt"><input type="radio" name="bank" value="A"><span><b>Only an administrator</b><small>The safest default</small></span></label><label class="pq-opt"><input type="radio" name="bank" value="P"><span><b>One trusted person</b><small>They can change bank details but can't pay vendors, so no one can do both</small></span></label></div></fieldset><fieldset class="pq" data-i="4"><legend>Someone raises a customer's credit limit without asking. What should happen?</legend><p class="why">This covers key fields like credit limits, vendor bank details and prices.</p><div class="pq-opts"><label class="pq-opt"><input type="radio" name="fields" value="N"><span><b>Nothing, for now</b><small>You can turn protection on any time</small></span></label><label class="pq-opt"><input type="radio" name="fields" value="L"><span><b>Allow it, but record who changed what</b><small>A gentle start: every change is logged</small></span></label><label class="pq-opt"><input type="radio" name="fields" value="B"><span><b>Block it unless their role allows it</b><small>Only the people you choose can make the change</small></span></label></div></fieldset><fieldset class="pq" data-i="5"><legend>Does anyone outside the company review your controls?</legend><p class="why">An auditor, lender, insurer or parent company, for example.</p><div class="pq-opts"><label class="pq-opt"><input type="radio" name="audit" value="Y"><span><b>Yes</b><small>Access review reminders get turned on</small></span></label><label class="pq-opt"><input type="radio" name="audit" value="N"><span><b>No</b><small>You can turn reviews on later</small></span></label></div></fieldset><fieldset class="pq" data-i="6"><legend>Should some people only see their own location or company?</legend><p class="why">For example, a warehouse lead who should only see their own warehouse.</p><div class="pq-opts"><label class="pq-opt"><input type="radio" name="loc" value="Y"><span><b>Yes</b><small>You'll add location or company filters to those roles</small></span></label><label class="pq-opt"><input type="radio" name="loc" value="N"><span><b>No</b><small>People see everything their role allows</small></span></label></div></fieldset></form>
       <div class="pq-nav"><button type="button" class="pq-btn" id="pq-back">Back</button><button type="button" class="pq-btn go" id="pq-next" disabled>Next</button></div>
       <div class="pq-result" id="pq-result" aria-live="polite">
-        <p class="res-kicker">Recommended setup</p>
+        <p class="res-kicker" id="r-kicker">Recommended setup</p>
         <p class="res-name" id="r-name"></p>
         <p class="res-why" id="r-why"></p>
         <div class="res-grid">
@@ -52,13 +52,13 @@
         <div class="code-box"><small>Your blueprint code</small><output id="r-code"></output><button type="button" id="r-copy">Copy code</button></div>
         <div class="how-use"><b>Using it in Business Central</b>
           <ol><li>Install AI Guardrails and search for <b>Set Up AI Guardrails</b>.</li><li>Paste the code under <b>Already planned on our website?</b></li><li>Open the People Board and choose <b>Suggest Roles</b>. Nothing changes for your users until you go live.</li></ol></div>
-        <div class="res-actions"><button type="button" class="pq-btn" id="r-edit">Change answers</button><a class="btn btn-primary" id="r-mail" href="mailto:sales@threefivesixtech.com?subject=AI%20Guardrails%20early%20access">Ask about early access</a></div>
+        <div class="res-actions"><button type="button" class="pq-btn" id="r-share">Copy link to this plan</button><button type="button" class="pq-btn" id="r-edit">Change answers</button><a class="btn btn-primary" id="r-mail" href="mailto:sales@threefivesixtech.com?subject=AI%20Guardrails%20early%20access">Ask about early access</a></div>
       </div>
     </div>
     <aside class="pq-side" aria-label="Progress">
       <h2>Your answers</h2>
-      <ol id="pq-steps"><li data-i="0">Team size</li><li data-i="1">Covering for others</li><li data-i="2">Kind of business</li><li data-i="3">Vendor bank details</li><li data-i="4">Key fields</li><li data-i="5">Outside review</li><li data-i="6">Locations</li></ol>
-      <p>Nothing you pick here leaves your browser.</p>
+      <ol id="pq-steps"><li data-i="0"><button type="button" class="pq-jump" disabled><span class="pq-q">Team size</span><span class="pq-a"></span></button></li><li data-i="1"><button type="button" class="pq-jump" disabled><span class="pq-q">Covering for others</span><span class="pq-a"></span></button></li><li data-i="2"><button type="button" class="pq-jump" disabled><span class="pq-q">Kind of business</span><span class="pq-a"></span></button></li><li data-i="3"><button type="button" class="pq-jump" disabled><span class="pq-q">Vendor bank details</span><span class="pq-a"></span></button></li><li data-i="4"><button type="button" class="pq-jump" disabled><span class="pq-q">Key fields</span><span class="pq-a"></span></button></li><li data-i="5"><button type="button" class="pq-jump" disabled><span class="pq-q">Outside review</span><span class="pq-a"></span></button></li><li data-i="6"><button type="button" class="pq-jump" disabled><span class="pq-q">Locations</span><span class="pq-a"></span></button></li></ol>
+      <p>Choose any answered step to change it. Nothing you pick here leaves your browser.</p>
     </aside>
   </div>
 </div></section>
@@ -112,16 +112,26 @@
     document.getElementById('pq-count').textContent='Question '+(i+1)+' of '+n;
     document.getElementById('pq-bar').style.width=(i/n*100)+'%';
     back.disabled=i===0;next.disabled=!val(NAMES[i]);next.textContent=i===n-1?'See my plan':'Next';
-    steps.forEach(function(s,k){s.className=k===i?'now':(val(NAMES[k])?'done':'')});
+    paintSide(i);
   }
   var ROLES={
     sample:['Sales rep','AR clerk','AP clerk','Buyer','Accountant','Operations staff','Viewer','Admin'],
     dist:['Order desk','Warehouse lead','Inventory control','Purchasing agent','Controller'],
     office:['Office manager','Office staff','Bookkeeper','Read only']
   };
+  function label(name){var c=form.querySelector('input[name="'+name+'"]:checked');return c?c.parentNode.querySelector('b').textContent:''}
+  function reachable(k){for(var j=0;j<k;j++){if(!val(NAMES[j]))return false}return true}
+  function paintSide(i){
+    steps.forEach(function(s,k){
+      var a=label(NAMES[k]);s.className=k===i?'now':(a?'done':'');
+      s.querySelector('.pq-a').textContent=a;
+      s.querySelector('.pq-jump').disabled=!(a||k===i)||!reachable(k)||k===i;
+    });
+  }
+  function codeOf(){return 'TFS1-'+NAMES.map(val).join('')}
   function result(){
     form.style.display='none';nav.style.display='none';prog.style.display='none';res.classList.add('on');card.classList.add('done');
-    steps.forEach(function(s){s.className='done'});
+    paintSide(-1);
     var size=val('size'),cover=val('cover')==='Y',biz=val('biz'),bank=val('bank'),fields=val('fields'),audit=val('audit')==='Y',loc=val('loc')==='Y';
     var name,why;
     if(cover&&size==='S'){name='Top-down tiers';why='A small team where people cover for each other: a few broad roles with firm guardrails.'}
@@ -139,17 +149,20 @@
            [loc?'Location limits: add filters to the roles that need them':'Location limits: not needed',loc]];
     var ul=document.getElementById('r-prot');ul.innerHTML='';
     p.forEach(function(x){var li=document.createElement('li');li.textContent=x[0];if(!x[1])li.className='off';ul.appendChild(li)});
-    var code='TFS1-'+size+val('cover')+biz+bank+fields+val('audit')+val('loc');
+    var code=codeOf();
     document.getElementById('r-code').textContent=code;
+    try{history.replaceState(null,'','?plan='+code)}catch(e){}
     document.getElementById('r-mail').href='mailto:sales@threefivesixtech.com?subject='+encodeURIComponent('AI Guardrails early access ('+code+')');
     res.setAttribute('tabindex','-1');res.focus({preventScroll:true});
   }
   var ptr=false;
   form.addEventListener('pointerdown',function(){ptr=true});
   form.addEventListener('keydown',function(){ptr=false});
-  form.addEventListener('change',function(){
-    next.disabled=!val(NAMES[cur]);steps[cur].className='now';
-    if(ptr){ptr=false;setTimeout(function(){if(cur<n-1)show(cur+1);else result()},240)}
+  form.addEventListener('change',function(){next.disabled=!val(NAMES[cur]);paintSide(cur)});
+  // A pointer click on any answer, even the one already chosen, moves on.
+  form.addEventListener('click',function(e){
+    if(e.target.tagName!=='INPUT'||!ptr)return;ptr=false;
+    setTimeout(function(){if(cur<n-1)show(cur+1);else result()},240);
   });
   next.addEventListener('click',function(){if(cur<n-1)show(cur+1);else result()});
   back.addEventListener('click',function(){if(cur>0)show(cur-1)});
@@ -158,9 +171,20 @@
     var b=this,c=document.getElementById('r-code').textContent;
     if(navigator.clipboard)navigator.clipboard.writeText(c).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy code'},1600)});
   });
-  steps.forEach(function(s,k){s.style.cursor='pointer';s.addEventListener('click',function(){
-    for(var j=0;j<k;j++){if(!val(NAMES[j]))return}show(k)})});
-  show(0);
+  steps.forEach(function(s,k){s.querySelector('.pq-jump').addEventListener('click',function(){if(reachable(k))show(k)})});
+  document.getElementById('r-share').addEventListener('click',function(){
+    var b=this,url=location.origin+location.pathname+'?plan='+codeOf();
+    function done(t){b.textContent=t;setTimeout(function(){b.textContent='Copy link to this plan'},1800)}
+    if(navigator.clipboard)navigator.clipboard.writeText(url).then(function(){done('Link copied')},function(){done(url)});else done(url);
+  });
+  // Open a shared plan: ?plan=TFS1-MYDPLYN (same format the app reads)
+  var m=/[?&]plan=(TFS1-[A-Z]{7})/i.exec(location.search),ok=false;
+  if(m){
+    var body=m[1].toUpperCase().slice(5);ok=true;
+    NAMES.forEach(function(n,k){var inp=form.querySelector('input[name="'+n+'"][value="'+body[k]+'"]');if(inp)inp.checked=true;else ok=false});
+    if(!ok)form.reset();
+  }
+  if(ok){result();document.getElementById('r-kicker').textContent='Shared plan: recommended setup'}else show(0);
 })();
 </script>
 </body></html>

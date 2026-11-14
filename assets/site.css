@@ -317,13 +317,18 @@ h2+.topics{margin-top:22px!important}
 .pq-btn:disabled{opacity:.35;cursor:default}
 .pq-side{border-top:2px solid var(--ink);padding-top:16px}
 .pq-side h2{font-size:17px;margin-bottom:12px;font-stretch:104%}
-.pq-side ol{list-style:none;display:grid;gap:9px;font-size:15px}
-.pq-side li{display:flex;gap:10px;align-items:baseline;color:var(--muted)}
-.pq-side li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--rule);transform:translateY(-1px)}
-.pq-side li.done{color:var(--ink-soft)}
-.pq-side li.done::before{background:var(--green);border-color:var(--green)}
-.pq-side li.now{color:var(--ink);font-weight:650}
-.pq-side li.now::before{border-color:var(--green-ink)}
+.pq-side ol{list-style:none;display:grid;gap:2px}
+.pq-side li{list-style:none}
+.pq-jump{display:grid;grid-template-columns:18px 1fr;column-gap:10px;width:100%;text-align:left;font:inherit;background:none;border:0;padding:8px 6px;margin:0 -6px;border-radius:8px;color:var(--muted);cursor:pointer}
+.pq-jump:disabled{cursor:default}
+.pq-jump:not(:disabled):hover{background:var(--card)}
+.pq-jump::before{content:"";grid-row:1/3;width:10px;height:10px;margin-top:6px;border-radius:50%;border:1.5px solid var(--rule)}
+.pq-q{font-size:14px}
+.pq-a{font-size:15px;color:var(--ink);font-weight:620;line-height:1.35}
+.pq-a:empty{display:none}
+.pq-side li.done .pq-jump::before{background:var(--green);border-color:var(--green)}
+.pq-side li.now .pq-q{color:var(--ink);font-weight:650}
+.pq-side li.now .pq-jump::before{border-color:var(--green-ink);box-shadow:0 0 0 3px var(--mint)}
 .pq-side p{margin-top:18px;padding-top:14px;border-top:1px solid var(--rule);font-size:14px;color:var(--muted)}
 .pq-result{display:none}
 .pq-result.on{display:block}
@@ -357,3 +362,4 @@ h2+.topics{margin-top:22px!important}
 .mt-s{margin-top:12px}.mt-m{margin-top:24px}.mt-l{margin-top:44px}
 .muted{color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+.pq-result:focus{outline:none}
