@@ -12,9 +12,9 @@ permissions:
 
 env:
   # Not secrets: the Azure side only trusts this repo's main branch.
-  AZURE_CLIENT_ID: '00000000-0000-0000-0000-000000000000'        # id-github-website-deploy
-  AZURE_TENANT_ID: '00000000-0000-0000-0000-000000000000'
-  AZURE_SUBSCRIPTION_ID: '00000000-0000-0000-0000-000000000000'
+  AZURE_CLIENT_ID: 'd9ced250-d58a-4c1d-946a-8085d9bbf2b6'        # id-github-website-deploy
+  AZURE_TENANT_ID: 'da8c8500-9955-42cf-9ed3-e1c541ac3987'
+  AZURE_SUBSCRIPTION_ID: '5956cad8-7a54-4bbb-8687-56e682110026'
   FUNCTION_APP: func-threefivesix-contact
 
 jobs:
