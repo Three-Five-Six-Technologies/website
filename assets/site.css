@@ -369,3 +369,37 @@ h2+.topics{margin-top:22px!important}
 .muted{color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .pq-result:focus{outline:none}
+
+/* Client login: a quiet text link beside the main button */
+.navlinks .login{font-weight:600;color:var(--ink)}
+.nav.dark .navlinks .login{color:#fff}
+.two .features{grid-template-columns:1fr}
+
+/* Contact form dialog */
+body.modal-open{overflow:hidden}
+dialog.cf{border:0;padding:0;border-radius:16px;width:min(560px,calc(100% - 24px));max-height:calc(100% - 24px);margin:auto;color:var(--ink);background:var(--card);box-shadow:0 30px 80px rgba(15,27,45,.35)}
+dialog.cf::backdrop{background:rgba(15,27,45,.6)}
+.cf-in{padding:32px 32px 26px;position:relative;border-top:4px solid var(--green);border-radius:16px}
+.cf-head{position:relative;padding-left:22px}
+.cf-head::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:5px;border-left:2px solid var(--green);border-right:1px solid var(--green)}
+.cf h2{font-size:26px;padding-right:40px}
+.cf-head p{margin-top:6px;font-size:15.5px;color:var(--ink-soft)}
+.cf-x{position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:8px;border:1px solid var(--rule);background:var(--card);color:var(--ink-soft);font-size:20px;line-height:1;cursor:pointer}
+.cf-x:hover{border-color:var(--ink);color:var(--ink)}
+.cf form{margin-top:22px;display:grid;gap:14px}
+.cf-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf label{display:grid;gap:5px;font-size:14px;font-weight:620;color:var(--ink)}
+.cf label em{font-style:normal;font-weight:400;color:var(--muted)}
+.cf input,.cf select,.cf textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:11px 13px;width:100%}
+.cf textarea{min-height:120px;resize:vertical}
+.cf input:focus,.cf select:focus,.cf textarea:focus{outline:0;background:var(--card);border-color:var(--green-ink);box-shadow:0 0 0 3px var(--mint)}
+.cf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-end{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:4px;font-size:13.5px;color:var(--muted)}
+.cf .btn[disabled]{opacity:.6;cursor:wait}
+.cf-err{display:none;font-size:14.5px;color:var(--red-ink);background:var(--red-bg);border-radius:8px;padding:10px 12px}
+.cf-err a{color:inherit}
+.cf-done{display:none;padding:10px 0 4px}
+.cf-done p{margin:8px 0 20px}
+.cf.sent form,.cf.sent .cf-head{display:none}
+.cf.sent .cf-done{display:block}
+@media(max-width:520px){.cf-in{padding:26px 20px 20px}.cf-two{grid-template-columns:1fr}}
