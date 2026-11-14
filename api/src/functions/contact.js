@@ -15,7 +15,11 @@ const TOPICS = {
   setup: { label: 'Consulting & setup', to: SALES },
   extension: { label: 'Custom extension', to: SALES },
   reporting: { label: 'Reporting & insights', to: SALES },
-  telemetry: { label: 'Telemetry app early access', to: SALES },
+  telemetry: { label: 'Telemetry Monitor early access', to: SALES },
+  ai: { label: 'AI for Business Central', to: SALES },
+  guardrails: { label: 'AI Guardrails early access', to: SALES },
+  edi: { label: 'TFS EDI early access', to: SALES },
+  golive: { label: 'Go-live data', to: SALES },
   support: { label: 'Support request', to: SUPPORT },
   other: { label: 'General question', to: SALES },
 };
