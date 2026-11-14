@@ -88,7 +88,7 @@ az role assignment create --assignee-object-id "$DEPLOY_PRINCIPAL_ID" --assignee
   --role "Website Contributor" --scope "$APP_RES_ID" --only-show-errors -o none 2>/dev/null || true
 
 say "Exchange Online: allow sending from ${MAILBOXES[*]} only"
-echo "  You'll be asked to sign in once more (device code) as an Exchange admin."
+echo "  Connecting to Exchange Online with your Cloud Shell sign-in."
 FILTER=""
 for m in "${MAILBOXES[@]}"; do FILTER="${FILTER:+$FILTER -or }PrimarySmtpAddress -eq '$m'"; done
 cat > /tmp/exo-rbac.ps1 <<PS
