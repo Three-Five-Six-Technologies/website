@@ -83,6 +83,14 @@ if ! az identity federated-credential show -n github-main --identity-name "$DEPL
     --subject "repo:$REPO:ref:refs/heads/main" \
     --audiences api://AzureADTokenExchange --only-show-errors -o none
 fi
+# GitHub may present the subject with immutable owner/repo IDs; trust that form too.
+IDS=$(curl -fsSL "https://api.github.com/repos/$REPO" | jq -r '"\(.owner.login)@\(.owner.id)/\(.name)@\(.id)"' 2>/dev/null || true)
+if [ -n "$IDS" ] && ! az identity federated-credential show -n github-main-ids --identity-name "$DEPLOY_ID" -g "$RG" -o none 2>/dev/null; then
+  az identity federated-credential create -n github-main-ids --identity-name "$DEPLOY_ID" -g "$RG" \
+    --issuer https://token.actions.githubusercontent.com \
+    --subject "repo:$IDS:ref:refs/heads/main" \
+    --audiences api://AzureADTokenExchange --only-show-errors -o none
+fi
 sleep 15
 az role assignment create --assignee-object-id "$DEPLOY_PRINCIPAL_ID" --assignee-principal-type ServicePrincipal \
   --role "Website Contributor" --scope "$APP_RES_ID" --only-show-errors -o none 2>/dev/null || true
