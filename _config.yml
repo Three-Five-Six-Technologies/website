@@ -1,0 +1,4 @@
+# GitHub Pages: keep the API source and repo tooling off the public site
+exclude:
+  - api
+  - README.md

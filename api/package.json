@@ -1,0 +1,10 @@
+{
+  "name": "threefivesix-website-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Contact form endpoint for threefivesixtech.com",
+  "main": "src/functions/*.js",
+  "dependencies": {
+    "@azure/functions": "^4.6.0"
+  }
+}
