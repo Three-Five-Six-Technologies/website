@@ -93,7 +93,7 @@ FILTER=""
 for m in "${MAILBOXES[@]}"; do FILTER="${FILTER:+$FILTER -or }PrimarySmtpAddress -eq '$m'"; done
 cat > /tmp/exo-rbac.ps1 <<PS
 \$ErrorActionPreference = 'Stop'
-Connect-ExchangeOnline -Device -ShowBanner:\$false
+Connect-ExchangeOnline -ShowBanner:\$false
 if (-not (Get-ServicePrincipal -Identity '$MI_APP_ID' -ErrorAction SilentlyContinue)) {
   New-ServicePrincipal -AppId '$MI_APP_ID' -ObjectId '$MI_OBJECT_ID' -DisplayName '$APP' | Out-Null
 }
