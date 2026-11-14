@@ -8,6 +8,12 @@ $filter = "PrimarySmtpAddress -eq 'sales@threefivesixtech.com' -or PrimarySmtpAd
 Write-Host "`n==> Connecting to Exchange Online" -ForegroundColor Green
 Connect-ExchangeOnline -ShowBanner:$false
 
+if ((Get-OrganizationConfig).IsDehydrated) {
+  Write-Host "==> Turning on organization customization (one-time for new tenants)" -ForegroundColor Green
+  Enable-OrganizationCustomization
+  Write-Host "   Done. Exchange can take a few minutes to catch up; if the next step errors, wait 10-15 minutes and run this again." -ForegroundColor Yellow
+}
+
 Write-Host "==> Registering the function's identity with Exchange" -ForegroundColor Green
 if (-not (Get-ServicePrincipal -Identity $appId -ErrorAction SilentlyContinue)) {
   New-ServicePrincipal -AppId $appId -ObjectId $objId -DisplayName 'func-threefivesix-contact' | Out-Null
