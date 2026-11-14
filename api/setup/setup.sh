@@ -22,6 +22,7 @@ REPO=Three-Five-Six-Technologies/website
 SCOPE_NAME="Website contact form mailboxes"
 MAILBOXES=("sales@threefivesixtech.com" "support@threefivesixtech.com")
 
+trap 'echo -e "\n\033[1;31mSetup stopped at line $LINENO. Paste the output above to Claude.\033[0m"' ERR
 say() { printf '\n\033[1;32m==> %s\033[0m\n' "$*"; }
 az config set extension.use_dynamic_install=yes_without_prompt --only-show-errors >/dev/null
 
@@ -35,7 +36,7 @@ az group create -n "$RG" -l "$LOC" --only-show-errors -o none
 say "Storage account"
 SA=$(az storage account list -g "$RG" --query "[0].name" -o tsv)
 if [ -z "$SA" ]; then
-  SA="st356web$(tr -dc 'a-z0-9' </dev/urandom | head -c 6)"
+  SA="st356web$(openssl rand -hex 3)"
   az storage account create -n "$SA" -g "$RG" -l "$LOC" --sku Standard_LRS \
     --allow-blob-public-access false --min-tls-version TLS1_2 --only-show-errors -o none
 fi
@@ -58,8 +59,12 @@ HOST=$(az functionapp show -n "$APP" -g "$RG" --query defaultHostName -o tsv)
 
 say "Managed identity for sending mail"
 MI_OBJECT_ID=$(az functionapp identity assign -n "$APP" -g "$RG" --query principalId -o tsv)
-sleep 10
-MI_APP_ID=$(az ad sp show --id "$MI_OBJECT_ID" --query appId -o tsv)
+MI_APP_ID=""
+for i in 1 2 3 4 5 6 7 8 9 10 11 12; do
+  MI_APP_ID=$(az ad sp show --id "$MI_OBJECT_ID" --query appId -o tsv 2>/dev/null || true)
+  [ -n "$MI_APP_ID" ] && break; sleep 10
+done
+[ -n "$MI_APP_ID" ] || { echo "Managed identity not visible in Entra yet; re-run the script in a minute."; exit 1; }
 echo "  objectId $MI_OBJECT_ID  appId $MI_APP_ID"
 
 say "CORS: only the website may call it"
