@@ -32,5 +32,5 @@ Write-Host "==> Done. Copy everything between the lines back to Claude:" -Foregr
 "AZURE_CLIENT_ID=$(az identity show -n id-github-website-deploy -g rg-website --query clientId -o tsv)"
 "AZURE_TENANT_ID=$(az account show --query tenantId -o tsv)"
 "AZURE_SUBSCRIPTION_ID=$(az account show --query id -o tsv)"
-"FUNCTION_HOST=$(az functionapp show -n func-threefivesix-contact -g rg-website --query defaultHostName -o tsv)"
+"FUNCTION_HOST=$(az functionapp show -n func-threefivesix-contact -g rg-website --query properties.defaultHostName -o tsv)"
 '------------------------------------------------------------'

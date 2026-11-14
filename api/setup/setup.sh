@@ -55,7 +55,7 @@ if ! az functionapp show -n "$APP" -g "$RG" -o none 2>/dev/null; then
     --instance-memory 512 --app-insights "$APPI" --only-show-errors -o none
 fi
 APP_RES_ID=$(az functionapp show -n "$APP" -g "$RG" --query id -o tsv)
-HOST=$(az functionapp show -n "$APP" -g "$RG" --query defaultHostName -o tsv)
+HOST=$(az functionapp show -n "$APP" -g "$RG" --query properties.defaultHostName -o tsv)
 
 say "Managed identity for sending mail"
 MI_OBJECT_ID=$(az functionapp identity assign -n "$APP" -g "$RG" --query principalId -o tsv)
