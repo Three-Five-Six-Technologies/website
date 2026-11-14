@@ -32,19 +32,19 @@
 
 <section class="hero"><div class="wrap hero-grid">
   <div class="margin">
-    <h1>Permissions, EDI, and what broke overnight. Fixed inside Business Central.</h1>
-    <p class="lead">Three Five Six Technologies builds apps that run inside Microsoft Dynamics 365 Business Central, helps companies put AI to work in BC safely, and steps in with consulting when something needs fixing.</p>
+    <h1><span class="h-a">Permissions, EDI, and what broke overnight.</span> <span class="h-b">Fixed inside Business Central.</span></h1>
+    <p class="lead">Apps that run inside Microsoft Dynamics 365 Business Central, AI set up safely, and consulting when something needs fixing.</p>
     <div class="actions">
       <a class="btn btn-primary" href="mailto:sales@threefivesixtech.com?subject=Business%20Central%20question">Talk to us about your BC</a>
       <a class="btn btn-ghost" href="#apps">See the apps</a>
     </div>
   </div>
-  <figure>
-  <div class="log" role="img" aria-label="Example activity log from the three apps running in Business Central: an EDI order arriving and becoming a sales order, a telemetry warning about job queue failures, a blocked vendor bank change, temporary access being approved, and outbound EDI documents.">
+  <figure class="log-fig">
+  <div class="log">
     <div class="log-head"><b>Wednesday in Business Central</b><span>Example data</span></div>
-    <ol aria-hidden="true"><li style="--i:0"><time>06:02</time><span class="app edi">TFS EDI</span><span class="msg">850 in: PO 4500123456, 3 lines</span></li><li style="--i:1"><time>06:02</time><span class="app edi">TFS EDI</span><span class="msg">Sales order SO-1042 <ins>created</ins></span></li><li style="--i:2"><time>06:40</time><span class="app tm">Telemetry</span><span class="msg">Job queue failures: 3 in 24h, <em>warning</em></span></li><li style="--i:3"><time>07:15</time><span class="app gr">Guardrails</span><span class="msg"><strong>Blocked</strong>: vendor bank change by D.PARK</span></li><li style="--i:4"><time>09:10</time><span class="app gr">Guardrails</span><span class="msg">Temporary access: 4h for M.REYES, <ins>approved</ins></span></li><li style="--i:5"><time>11:30</time><span class="app edi">TFS EDI</span><span class="msg">855 <ins>sent</ins>: 2 lines accepted, 1 changed</span></li><li style="--i:6"><time>14:05</time><span class="app edi">TFS EDI</span><span class="msg">856 ready: shipment SH-2201, 4 cartons</span></li><li style="--i:7"><time>14:06</time><span class="app edi">TFS EDI</span><span class="msg">810 <em>held</em> until the 856 is sent</span></li></ol>
+    <ol aria-label="Example activity from the three apps. Each line links to how it works."><li style="--i:0"><a href="/edi/#documents"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">850 in: PO 4500123456, 3 lines</span></a></li><li style="--i:1"><a href="/edi/#units-that-make-sense"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">Sales order SO-1042 <ins>created</ins></span></a></li><li style="--i:2"><a href="/telemetry-monitor/#signals"><time>06:40</time><span class="app">Telemetry</span><span class="msg">Job queue failures: 3 in 24h, <em>warning</em></span></a></li><li style="--i:3"><a href="/ai-guardrails/#protected-fields"><time>07:15</time><span class="app">Guardrails</span><span class="msg"><strong>Blocked</strong>: vendor bank change by D.PARK</span></a></li><li style="--i:4"><a href="/ai-guardrails/#temporary-access-that-removes-itself"><time>09:10</time><span class="app">Guardrails</span><span class="msg">Temporary access: 4h for M.REYES, <ins>approved</ins></span></a></li><li style="--i:5"><a href="/edi/#documents"><time>11:30</time><span class="app">TFS EDI</span><span class="msg">855 <ins>sent</ins>: 2 lines accepted, 1 changed</span></a></li><li style="--i:6"><a href="/edi/#documents"><time>14:05</time><span class="app">TFS EDI</span><span class="msg">856 ready: shipment SH-2201, 4 cartons</span></a></li><li style="--i:7"><a href="/edi/#documents"><time>14:06</time><span class="app">TFS EDI</span><span class="msg">810 <em>held</em> until the 856 is sent</span></a></li></ol>
   </div>
-  <figcaption class="log-cap">A morning with all three apps installed. Every line is something they actually do.</figcaption>
+  <figcaption class="log-cap">A morning with all three apps installed. Select any line to see how it works.</figcaption>
 </figure>
 </div></section>
 
