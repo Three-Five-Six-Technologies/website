@@ -7,7 +7,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#eef2f6">
+<meta name="theme-color" content="#0f1b2d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Three Five Six Technologies">
 <meta property="og:title" content="TFS EDI for Business Central">
@@ -29,21 +29,21 @@
   </ul>
 </div></header>
 <main id="main">
-<section class="page-hero edi"><div class="wrap">
+<section class="page-hero"><div class="wrap">
   <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/#apps">Apps</a></li><li aria-current="page">TFS EDI</li></ol></nav>
   <div class="page-hero-grid">
-    <div>
-      <div class="product-top"><span class="app-name">TFS EDI</span><span class="status">In development</span></div>
+    <div class="margin">
+      <div class="product-top"><span class="kind">TFS EDI</span><span class="status">In development</span></div>
       <h1>EDI that lives in Business Central and tells you what went wrong.</h1>
       <p class="lead">Purchase orders from your trading partners come in as sales orders. Acknowledgments, ship notices and invoices go out on their own when you release, ship and post. When something doesn't fit, it lands on a worklist with a plain error and a way to fix it.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="mailto:sales@threefivesixtech.com?subject=TFS%20EDI%20early%20access">Request early access</a>
+        <a class="btn btn-dark" href="mailto:sales@threefivesixtech.com?subject=TFS%20EDI%20early%20access">Request early access</a>
         
-        <a class="btn btn-ghost" href="/help/edi/">Read the docs</a>
+        <a class="btn btn-line" href="/help/edi/">Read the docs</a>
       </div>
       <p class="meta-line">TFS EDI for Microsoft Dynamics 365 Business Central (online). Not on AppSource yet.</p>
     </div>
-    <div class="snip edi" role="img" aria-label="Example of TFS EDI turning an incoming 850 purchase order file into a Business Central sales order.">
+    <div class="desk"><div class="snip edi" role="img" aria-label="Example of TFS EDI turning an incoming 850 purchase order file into a Business Central sales order.">
   <div class="snip-head"><b>Transaction 850 in</b><span>Example data</span></div>
   <div class="x12"><span class="seg">BEG</span>*00*SA*<span class="hit">4500123456</span>**20261112
 <span class="seg">DTM</span>*002*<span class="hit">20261118</span>
@@ -57,7 +57,7 @@
       <tr><td>Line 1: Item 1000</td><td>10 &times; 12PK</td><td class="dim">120 EA, sold in 12-packs</td></tr>
     </tbody>
   </table>
-</div>
+</div></div>
   </div>
 </div></section>
 <section class="sec"><div class="wrap">
@@ -66,7 +66,7 @@
   <div class="steps"><div class="step"><h3>850 purchase order in</h3><p>Matched to the right partner by qualifier and ID, checked against that partner's rules, and turned into a sales order. Every reference on the order is kept.</p></div><div class="step"><h3>855 acknowledgment out</h3><p>Created when you release the order, with a status per line: accepted, quantity changed or rejected. Unreleased orders go out at your cutoff time, once.</p></div><div class="step"><h3>856 ship notice out</h3><p>Queued when you post the shipment, with cartons and SSCC labels from your pack source when the partner needs them.</p></div><div class="step"><h3>810 invoice out</h3><p>Created when you post the invoice and held until the order's ship notices are sent, so they never arrive out of order.</p></div></div>
 </div></section>
 
-<section class="sec sec-sky"><div class="wrap">
+<section class="sec sec-alt"><div class="wrap">
   <div class="sec-head"><h2>Partner rules instead of custom code</h2>
   <p>Every retailer does EDI a little differently. Those differences live in settings on the partner, not in code someone has to maintain.</p></div>
   <div class="features"><div class="feature"><h3>Units that make sense</h3><p>A customer orders 120 each of an item you sell in 12-packs; the order says 10 &times; 12PK. 125 each becomes an exception that names both nearest pack counts. Outbound documents go back in the unit the customer ordered in.</p></div><div class="feature"><h3>Partner-specific item IDs</h3><p>EDI Item References hold a partner's own IDs (UPC, vendor part number, style number), and a per-partner list decides which IDs go out on each document, in order.</p></div><div class="feature"><h3>Dates where you want them</h3><p>A date map puts each date on the order into the sales header field you choose, standard or custom. Test it against the partner's last real file.</p></div><div class="feature"><h3>References in and out</h3><p>Every REF on the 850 is stored with the order. Reference rules send exactly the qualifiers a partner asks for on each document.</p></div><div class="feature"><h3>Duplicate protection</h3><p>A PO already invoiced in the last six months is stopped as a duplicate. Change the window per partner, or block repeats entirely.</p></div><div class="feature"><h3>Draft, Testing, Live</h3><p>Draft partners don't process. Test files are checked by building the order and rolling it back, so a pass proves the real thing.</p></div></div>
@@ -85,10 +85,10 @@
     </ul>
   </div>
 </div></section>
-<section class="sec-tight"><div class="wrap"><div class="contact">
+<section class="closing"><div class="wrap"><div class="contact">
   <div><h2>Tired of your current EDI setup?</h2><p>Tell us which partners you trade with and what's painful about how EDI works for you today. We're looking for a few companies to try TFS EDI early.</p></div>
   <div><a class="btn btn-primary" href="mailto:sales@threefivesixtech.com?subject=TFS%20EDI%20early%20access">Request early access</a>
-  <span class="addr">or write to <a href="mailto:sales@threefivesixtech.com?subject=TFS%20EDI%20early%20access">sales@threefivesixtech.com</a></span></div>
+  <span class="addr">or email <a href="mailto:sales@threefivesixtech.com?subject=TFS%20EDI%20early%20access">sales@threefivesixtech.com</a></span></div>
 </div></div></section>
 </main>
 <footer class="foot"><div class="wrap">

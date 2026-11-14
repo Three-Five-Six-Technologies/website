@@ -7,7 +7,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#eef2f6">
+<meta name="theme-color" content="#0f1b2d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Three Five Six Technologies">
 <meta property="og:title" content="Telemetry Monitor for Business Central">
@@ -29,21 +29,21 @@
   </ul>
 </div></header>
 <main id="main">
-<section class="page-hero tm"><div class="wrap">
+<section class="page-hero"><div class="wrap">
   <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/#apps">Apps</a></li><li aria-current="page">Telemetry Monitor</li></ol></nav>
   <div class="page-hero-grid">
-    <div>
-      <div class="product-top"><span class="app-name">Telemetry Monitor</span><span class="status">In development</span></div>
+    <div class="margin">
+      <div class="product-top"><span class="kind">Telemetry Monitor</span><span class="status">In development</span></div>
       <h1>Find out what broke overnight before your users tell you.</h1>
       <p class="lead">Business Central already sends detailed telemetry to Azure Application Insights, but reading it usually means Power BI licenses, KQL or an Azure expert. Telemetry Monitor shows it as a plain-English health dashboard, right inside Business Central.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="mailto:sales@threefivesixtech.com?subject=Telemetry%20Monitor%20early%20access">Request early access</a>
-        <a class="btn btn-ghost" href="/telemetry-monitor/setup">Setup guide</a>
-        <a class="btn btn-ghost" href="/help/telemetry-monitor/">Read the docs</a>
+        <a class="btn btn-dark" href="mailto:sales@threefivesixtech.com?subject=Telemetry%20Monitor%20early%20access">Request early access</a>
+        <a class="btn btn-line" href="/telemetry-monitor/setup">Setup guide</a>
+        <a class="btn btn-line" href="/help/telemetry-monitor/">Read the docs</a>
       </div>
       <p class="meta-line">TFS Telemetry Monitor for Microsoft Dynamics 365 Business Central (online). Not on AppSource yet.</p>
     </div>
-    <div class="snip tm" role="img" aria-label="Example of the Telemetry Monitor dashboard: each signal with a count, a status and a plain-English next step.">
+    <div class="desk"><div class="snip tm" role="img" aria-label="Example of the Telemetry Monitor dashboard: each signal with a count, a status and a plain-English next step.">
   <div class="snip-head"><b>Telemetry Dashboard</b><span>Last 24 hours, example data</span></div>
   <table>
     <thead><tr><th>Signal</th><th>Count</th><th>Status</th></tr></thead>
@@ -54,7 +54,7 @@
       <tr><td>Active users</td><td>23</td><td><span class="chip ok">OK</span></td></tr>
     </tbody>
   </table>
-</div>
+</div></div>
   </div>
 </div></section>
 <section class="sec"><div class="wrap">
@@ -63,7 +63,7 @@
   <div class="table-wrap"><table class="data"><thead><tr><th>Signal</th><th>Area</th><th>What it tells you to do</th></tr></thead><tbody><tr><td>Error messages shown to users</td><td>Errors</td><td>Review the most frequent error messages; repeated errors often point to missing setup or training needs.</td></tr><tr><td>Permission errors</td><td>Errors</td><td>Users are blocked by missing permissions. Review their permission sets.</td></tr><tr><td>Database deadlocks</td><td>Performance</td><td>Two processes blocked each other. Check job queue schedules and integrations that run at the same time.</td></tr><tr><td>Database lock timeouts</td><td>Performance</td><td>Users or jobs waited too long for locked data. Spread out heavy postings and job queue entries.</td></tr><tr><td>Slow database queries</td><td>Performance</td><td>Some queries take longer than 750 ms. Check filters, keys and extensions on busy pages.</td></tr><tr><td>Slow AL operations</td><td>Performance</td><td>Some AL code takes longer than 10 seconds. Identify the extension and object involved.</td></tr><tr><td>Job queue failures</td><td>Automation</td><td>Open Job Queue Entries and check the error for failed entries, then restart them.</td></tr><tr><td>Failed incoming web service calls</td><td>Integrations</td><td>An integration calling Business Central is failing. Check its credentials and the endpoints it uses.</td></tr><tr><td>Failed outgoing web service calls</td><td>Integrations</td><td>Business Central calls to another system are failing. Check that service and its credentials.</td></tr><tr><td>Active users</td><td>Usage</td><td>Number of distinct users who opened pages. Compare with your license count.</td></tr></tbody></table></div>
 </div></section>
 
-<section class="sec sec-sand"><div class="wrap">
+<section class="sec sec-alt"><div class="wrap">
   <div class="features"><div class="feature"><h3>No Power BI, no KQL</h3><p>The queries are built in. Open the dashboard, pick a time range, read the recommendations.</p></div><div class="feature"><h3>A connection test that explains itself</h3><p>Test Connection tells you if you're connected with data, connected with no data in the last 24 hours, or not connected, and why.</p></div><div class="feature"><h3>Your data stays in Azure</h3><p>It reads your telemetry on demand and doesn't copy it into Business Central. The client secret is kept in isolated storage, not in a table.</p></div><div class="feature"><h3>Just this environment, or all of them</h3><p>By default it only counts telemetry from the environment you're in. Turn that off to see everything the resource receives.</p></div></div>
 </div></section>
 
@@ -74,10 +74,10 @@
   <div class="callout"><h3>Where it is today</h3><p>Version 1.0 is in testing. Planned next:</p>
   <ul><li>Alerts to Teams or email when a threshold is crossed</li><li>Editable thresholds</li><li>Drill-down into the recent events behind a number</li><li>License and feature-adoption views</li></ul></div>
 </div></section>
-<section class="sec-tight"><div class="wrap"><div class="contact">
+<section class="closing"><div class="wrap"><div class="contact">
   <div><h2>Want to see what your telemetry says?</h2><p>If you already send telemetry to Application Insights, you can be looking at your dashboard in about 15 minutes. Email us for early access.</p></div>
   <div><a class="btn btn-primary" href="mailto:sales@threefivesixtech.com?subject=Telemetry%20Monitor%20early%20access">Request early access</a>
-  <span class="addr">or write to <a href="mailto:sales@threefivesixtech.com?subject=Telemetry%20Monitor%20early%20access">sales@threefivesixtech.com</a></span></div>
+  <span class="addr">or email <a href="mailto:sales@threefivesixtech.com?subject=Telemetry%20Monitor%20early%20access">sales@threefivesixtech.com</a></span></div>
 </div></div></section>
 </main>
 <footer class="foot"><div class="wrap">

@@ -7,7 +7,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#eef2f6">
+<meta name="theme-color" content="#0f1b2d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Three Five Six Technologies">
 <meta property="og:title" content="Permissions Planner for Business Central">
@@ -29,11 +29,13 @@
   </ul>
 </div></header>
 <main id="main">
-<section class="page-hero"><div class="wrap">
+<section class="page-hero slim"><div class="wrap">
   <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/ai-guardrails/">AI Guardrails</a></li><li aria-current="page">Permissions Planner</li></ol></nav>
-  <div class="product-top"><span class="app-name">AI Guardrails</span></div>
+  <div class="margin"><div class="product-top"><span class="kind">AI Guardrails</span></div>
   <h1>Plan your Business Central permissions in two minutes</h1>
-  <p class="lead">Seven questions about how your company actually works. You'll get a recommended setup and a blueprint code that AI Guardrails reads, so its setup skips straight to your plan.</p>
+  <p class="lead">Seven questions about how your company actually works. You'll get a recommended setup and a blueprint code that AI Guardrails reads, so its setup skips straight to your plan.</p></div>
+</div></section>
+<section class="sec-tight sec-alt"><div class="wrap">
   <div class="planner-shell" id="planner">
     <div class="pq-card">
       <div class="pq-progress"><span id="pq-count">Question 1 of 7</span><div class="pq-bar"><i id="pq-bar"></i></div></div>
@@ -61,7 +63,7 @@
   </div>
 </div></section>
 
-<section class="sec sec-mint"><div class="wrap two">
+<section class="sec"><div class="wrap two">
   <div><h2>The three setups</h2>
   <p class="mt-m"><b>Top-down tiers</b> suit small teams where people cover for each other: a few broad roles with firm guardrails.</p>
   <p class="mt-s"><b>Role-based</b> suits clear jobs: each person gets only the abilities their job needs.</p>
@@ -101,11 +103,11 @@
   var root=document.getElementById('planner');root.classList.add('js');
   var form=document.getElementById('pq-form'),qs=[].slice.call(form.querySelectorAll('.pq')),n=qs.length,cur=0;
   var next=document.getElementById('pq-next'),back=document.getElementById('pq-back'),nav=root.querySelector('.pq-nav');
-  var res=document.getElementById('pq-result'),prog=root.querySelector('.pq-progress'),steps=[].slice.call(document.querySelectorAll('#pq-steps li'));
+  var card=root.querySelector('.pq-card'),res=document.getElementById('pq-result'),prog=root.querySelector('.pq-progress'),steps=[].slice.call(document.querySelectorAll('#pq-steps li'));
   var NAMES=['size','cover','biz','bank','fields','audit','loc'];
   function val(name){var c=form.querySelector('input[name="'+name+'"]:checked');return c?c.value:null}
   function show(i){
-    cur=i;res.classList.remove('on');form.style.display='';nav.style.display='';prog.style.display='';
+    cur=i;res.classList.remove('on');card.classList.remove('done');form.style.display='';nav.style.display='';prog.style.display='';
     qs.forEach(function(q,k){q.classList.toggle('on',k===i)});
     document.getElementById('pq-count').textContent='Question '+(i+1)+' of '+n;
     document.getElementById('pq-bar').style.width=(i/n*100)+'%';
@@ -118,7 +120,7 @@
     office:['Office manager','Office staff','Bookkeeper','Read only']
   };
   function result(){
-    form.style.display='none';nav.style.display='none';prog.style.display='none';res.classList.add('on');
+    form.style.display='none';nav.style.display='none';prog.style.display='none';res.classList.add('on');card.classList.add('done');
     steps.forEach(function(s){s.className='done'});
     var size=val('size'),cover=val('cover')==='Y',biz=val('biz'),bank=val('bank'),fields=val('fields'),audit=val('audit')==='Y',loc=val('loc')==='Y';
     var name,why;
