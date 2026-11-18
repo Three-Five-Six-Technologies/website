@@ -186,6 +186,7 @@ p code,li code,td code,dd code{background:var(--paper-2);border:1px solid var(--
 
 /* Steps: only for real sequences */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:step;border-top:2px solid var(--ink)}
+.steps.five{grid-template-columns:repeat(auto-fit,minmax(176px,1fr))}
 .step{counter-increment:step;padding:24px 24px 6px 0}
 .step::before{content:counter(step);display:block;font-size:44px;font-weight:800;font-stretch:120%;color:var(--green-ink);line-height:1;margin-bottom:14px}
 .step h3{font-size:19px;margin-bottom:6px}

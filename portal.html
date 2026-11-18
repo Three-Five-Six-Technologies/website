@@ -41,8 +41,8 @@
 <section class="sec"><div class="wrap">
   <div class="sec-head"><h2>Your apps, under one roof</h2><p>Each app is its own space in the portal, with its own menu. You only see the ones your company has.</p></div>
   <div class="two">
-    <div class="callout"><h3>EDI</h3><p>Every EDI file your company sends and receives, readable and searchable, plus what needs attention, payments and deductions, and sell-through from your 852s. <a href="/edi/#portal">More about the EDI portal</a></p></div>
-    <div class="callout"><h3>Demand Forecast</h3><p>Your item forecasts from Forecast Copilot in Business Central: what changed, how accurate past forecasts were, and where supply runs short. <span class="status">In development</span></p></div>
+    <div class="callout"><h3>EDI</h3><p>Every EDI file your company sends and receives, readable and searchable, plus what needs attention, payments and deductions, and sell-through from your 852s by week, month, quarter or accounting period. Download reports as PDF or Excel, and drag in files that didn't come through Business Central. <a href="/edi/#portal">More about the EDI portal</a></p></div>
+    <div class="callout"><h3>Demand Forecast</h3><p>Your item forecasts from <a href="/forecast-copilot/">Forecast Copilot</a> in Business Central: the items that need a decision, each item's history and forecast, and how accurate past forecasts were. Read-only, so planning stays in BC. <span class="status">In development</span></p></div>
   </div>
 </div></section>
 <section class="sec sec-alt"><div class="wrap">
@@ -63,6 +63,7 @@
       <li><a href="/ai-guardrails/">AI Guardrails</a></li>
       <li><a href="/edi/">TFS EDI</a></li>
       <li><a href="/telemetry-monitor/">Telemetry Monitor</a></li>
+      <li><a href="/forecast-copilot/">Forecast Copilot</a></li>
       <li><a href="/ai-guardrails/planner">Permissions Planner</a></li>
     </ul></div>
     <div><h4>Work with us</h4><ul>
@@ -93,7 +94,7 @@
       <label><span>Company <em>(optional)</em></span><input name="company" autocomplete="organization" maxlength="160"></label>
     </div>
     <label><span>Email</span><input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@company.com"></label>
-    <label><span>What's it about?</span><select name="topic"><option value="project">A new project</option><option value="setup">Consulting and setup</option><option value="extension">Custom extension</option><option value="golive">Go-live data</option><option value="reporting">Reporting</option><option value="ai">AI for Business Central</option><option value="guardrails">AI Guardrails early access</option><option value="edi">TFS EDI early access</option><option value="telemetry">Telemetry Monitor early access</option><option value="support">Help with a problem (existing clients)</option><option value="other">Something else</option></select></label>
+    <label><span>What's it about?</span><select name="topic"><option value="project">A new project</option><option value="setup">Consulting and setup</option><option value="extension">Custom extension</option><option value="golive">Go-live data</option><option value="reporting">Reporting</option><option value="ai">AI for Business Central</option><option value="guardrails">AI Guardrails early access</option><option value="edi">TFS EDI early access</option><option value="telemetry">Telemetry Monitor early access</option><option value="forecast">Forecast Copilot early access</option><option value="support">Help with a problem (existing clients)</option><option value="other">Something else</option></select></label>
     <label><span>Message <em>(optional)</em></span><textarea name="message" maxlength="5000" placeholder="What's going on in Business Central?"></textarea></label>
     <label class="cf-hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
     <p class="cf-err" role="alert"></p>

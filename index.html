@@ -42,16 +42,16 @@
   <figure class="log-fig">
   <div class="log">
     <div class="log-head"><b>Wednesday in Business Central</b><span>Example data</span></div>
-    <ol aria-label="Example activity from the three apps. Each line links to how it works."><li style="--i:0"><a href="/edi/#documents"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">850 in: PO 4500123456, 3 lines</span></a></li><li style="--i:1"><a href="/edi/#units-that-make-sense"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">Sales order SO-1042 <ins>created</ins></span></a></li><li style="--i:2"><a href="/telemetry-monitor/#signals"><time>06:40</time><span class="app">Telemetry</span><span class="msg">Job queue failures: 3 in 24h, <em>warning</em></span></a></li><li style="--i:3"><a href="/ai-guardrails/#protected-fields"><time>07:15</time><span class="app">Guardrails</span><span class="msg"><strong>Blocked</strong>: vendor bank change by D.PARK</span></a></li><li style="--i:4"><a href="/ai-guardrails/#temporary-access-that-removes-itself"><time>09:10</time><span class="app">Guardrails</span><span class="msg">Temporary access: 4h for M.REYES, <ins>approved</ins></span></a></li><li style="--i:5"><a href="/edi/#documents"><time>11:30</time><span class="app">TFS EDI</span><span class="msg">855 <ins>sent</ins>: 2 lines accepted, 1 changed</span></a></li><li style="--i:6"><a href="/edi/#documents"><time>14:05</time><span class="app">TFS EDI</span><span class="msg">856 ready: shipment SH-2201, 4 cartons</span></a></li><li style="--i:7"><a href="/edi/#documents"><time>14:06</time><span class="app">TFS EDI</span><span class="msg">810 <em>held</em> until the 856 is sent</span></a></li></ol>
+    <ol aria-label="Example activity from the four apps. Each line links to how it works."><li style="--i:0"><a href="/forecast-copilot/#exceptions"><time>05:30</time><span class="app">Forecast</span><span class="msg">4 items need a decision, 1 <strong>stockout risk</strong></span></a></li><li style="--i:1"><a href="/edi/#documents"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">850 in: PO 4500123456, 3 lines</span></a></li><li style="--i:2"><a href="/edi/#units-that-make-sense"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">Sales order SO-1042 <ins>created</ins></span></a></li><li style="--i:3"><a href="/telemetry-monitor/#signals"><time>06:40</time><span class="app">Telemetry</span><span class="msg">Job queue failures: 3 in 24h, <em>warning</em></span></a></li><li style="--i:4"><a href="/ai-guardrails/#protected-fields"><time>07:15</time><span class="app">Guardrails</span><span class="msg"><strong>Blocked</strong>: vendor bank change by D.PARK</span></a></li><li style="--i:5"><a href="/ai-guardrails/#temporary-access-that-removes-itself"><time>09:10</time><span class="app">Guardrails</span><span class="msg">Temporary access: 4h for M.REYES, <ins>approved</ins></span></a></li><li style="--i:6"><a href="/ai-guardrails/#new-hires"><time>10:00</time><span class="app">Guardrails</span><span class="msg">New hire A.KIM set up like J.ALLEN, <ins>ready</ins></span></a></li><li style="--i:7"><a href="/edi/#documents"><time>11:30</time><span class="app">TFS EDI</span><span class="msg">855 <ins>sent</ins>: 2 lines accepted, 1 changed</span></a></li><li style="--i:8"><a href="/edi/#documents"><time>14:05</time><span class="app">TFS EDI</span><span class="msg">856 ready: shipment SH-2201, 4 cartons</span></a></li><li style="--i:9"><a href="/edi/#documents"><time>14:06</time><span class="app">TFS EDI</span><span class="msg">810 <em>held</em> until the 856 is sent</span></a></li></ol>
   </div>
-  <figcaption class="log-cap">A morning with all three apps installed. Select any line to see how it works.</figcaption>
+  <figcaption class="log-cap">A morning with all four apps installed. Select any line to see how it works.</figcaption>
 </figure>
 </div></section>
 
 <section class="sec" id="apps"><div class="wrap">
   <div class="sec-head">
-    <h2>Three apps that work inside Business Central</h2>
-    <p>Each one uses BC's own pages, permissions and job queue, so there's nothing new for your team to log into. All three are in development and tested in a sandbox. Early access is open.</p>
+    <h2>Four apps that work inside Business Central</h2>
+    <p>Each one uses BC's own pages, permissions and job queue, so there's nothing new for your team to log into. All four are in development and tested in a sandbox. Early access is open.</p>
   </div>
   <div class="products">
     <article class="product gr">
@@ -62,7 +62,8 @@
         <ul>
           <li>Roll back any change to exactly how access was before</li>
           <li>Protect fields like vendor bank details and credit limits on every page, API and Excel edit</li>
-          <li>Auditor-ready reports, access reviews and temporary access that removes itself</li>
+          <li>New hires and leavers handled everywhere a user is set up in BC, not just permissions</li>
+          <li>A printable audit pack, segregation-of-duties checks, and temporary access that removes itself</li>
         </ul>
         <a class="more" href="/ai-guardrails/">How AI Guardrails works</a>
       </div>
@@ -88,6 +89,7 @@
           <li>Per-partner rules instead of custom code: units, item references, dates, duplicates</li>
           <li>An exceptions worklist with Fix, Reprocess and Process Anyway</li>
           <li>Search any value in any file: PO, UPC, store number, control number</li>
+          <li>A portal for your team with every file, sell-through from 852s, and reports as PDF or Excel</li>
         </ul>
         <a class="more" href="/edi/">How TFS EDI works</a>
       </div>
@@ -128,6 +130,31 @@
       <tr><td>Database lock timeouts</td><td>14</td><td><span class="chip crit">Critical</span></td></tr>
       <tr><td>Failed outgoing web service calls</td><td>0</td><td><span class="chip ok">OK</span></td></tr>
       <tr><td>Active users</td><td>23</td><td><span class="chip ok">OK</span></td></tr>
+    </tbody>
+  </table>
+</div></div>
+    </article>
+    <article class="product fc">
+      <div class="product-copy">
+        <div class="product-top"><span class="kind">Demand planning</span><span class="status">In development</span></div>
+        <h3>Forecast Copilot</h3>
+        <p>A forecasting assistant for Business Central. It builds a baseline forecast every night and shows your forecaster only the items that need a decision, then publishes to BC's standard Demand Forecast.</p>
+        <ul>
+          <li>Flags stockout risk, excess, bias, demand changes and new items</li>
+          <li>Override with a reason, or accept the suggestion, in one workbench</li>
+          <li>Measures accuracy every month, and turns a stockout risk into a requisition line</li>
+        </ul>
+        <a class="more" href="/forecast-copilot/">How Forecast Copilot works</a>
+      </div>
+      <div class="desk"><div class="snip fc" role="img" aria-label="Example of the Forecast Copilot inbox: each flagged item and why it was flagged.">
+  <div class="snip-head"><b>Forecaster inbox</b><span>Example data</span></div>
+  <table>
+    <thead><tr><th>Item</th><th>Flag</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>1000 Trail bike</td><td><span class="chip crit">Stockout risk</span></td><td class="dim">Covers 9 days, lead time 21</td></tr>
+      <tr><td>1920 Desk lamp</td><td><span class="chip warn">Demand signal</span></td><td class="dim">Last 28 days 35% above baseline</td></tr>
+      <tr><td>1896 Side table</td><td><span class="chip warn">Excess</span></td><td class="dim">210 days of supply</td></tr>
+      <tr><td>2100 Water bottle</td><td><span class="chip ok">New item</span></td><td class="dim">First sale 6 weeks ago</td></tr>
     </tbody>
   </table>
 </div></div>
@@ -213,6 +240,7 @@
       <li><a href="/ai-guardrails/">AI Guardrails</a></li>
       <li><a href="/edi/">TFS EDI</a></li>
       <li><a href="/telemetry-monitor/">Telemetry Monitor</a></li>
+      <li><a href="/forecast-copilot/">Forecast Copilot</a></li>
       <li><a href="/ai-guardrails/planner">Permissions Planner</a></li>
     </ul></div>
     <div><h4>Work with us</h4><ul>
@@ -243,7 +271,7 @@
       <label><span>Company <em>(optional)</em></span><input name="company" autocomplete="organization" maxlength="160"></label>
     </div>
     <label><span>Email</span><input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@company.com"></label>
-    <label><span>What's it about?</span><select name="topic"><option value="project">A new project</option><option value="setup">Consulting and setup</option><option value="extension">Custom extension</option><option value="golive">Go-live data</option><option value="reporting">Reporting</option><option value="ai">AI for Business Central</option><option value="guardrails">AI Guardrails early access</option><option value="edi">TFS EDI early access</option><option value="telemetry">Telemetry Monitor early access</option><option value="support">Help with a problem (existing clients)</option><option value="other">Something else</option></select></label>
+    <label><span>What's it about?</span><select name="topic"><option value="project">A new project</option><option value="setup">Consulting and setup</option><option value="extension">Custom extension</option><option value="golive">Go-live data</option><option value="reporting">Reporting</option><option value="ai">AI for Business Central</option><option value="guardrails">AI Guardrails early access</option><option value="edi">TFS EDI early access</option><option value="telemetry">Telemetry Monitor early access</option><option value="forecast">Forecast Copilot early access</option><option value="support">Help with a problem (existing clients)</option><option value="other">Something else</option></select></label>
     <label><span>Message <em>(optional)</em></span><textarea name="message" maxlength="5000" placeholder="What's going on in Business Central?"></textarea></label>
     <label class="cf-hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
     <p class="cf-err" role="alert"></p>

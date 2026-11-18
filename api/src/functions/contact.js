@@ -16,6 +16,7 @@ const TOPICS = {
   extension: { label: 'Custom extension', to: SALES },
   reporting: { label: 'Reporting & insights', to: SALES },
   telemetry: { label: 'Telemetry Monitor early access', to: SALES },
+  forecast: { label: 'Forecast Copilot early access', to: SALES },
   ai: { label: 'AI for Business Central', to: SALES },
   guardrails: { label: 'AI Guardrails early access', to: SALES },
   edi: { label: 'TFS EDI early access', to: SALES },

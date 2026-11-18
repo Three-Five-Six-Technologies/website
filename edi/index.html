@@ -79,8 +79,8 @@
     <h3>Where it is today</h3>
     <p>Version 0.2, with 42 automated tests passing in a Business Central sandbox. Not built yet:</p>
     <ul>
-      <li>Sending and receiving files over AS2, SFTP or a VAN, and 997 acknowledgments. For now, outbound files are downloaded and sent through your current connection.</li>
-      <li>Other documents such as 860, 820 and 846, and ready-made retailer templates</li>
+      <li>Sending and receiving files over AS2, SFTP or a VAN. For now, outbound files are downloaded and sent through your current connection.</li>
+      <li>Bringing 997, 820, 812 and 860 into Business Central (the portal already reads 997s, 820s and 812s), plus 846 and ready-made retailer templates</li>
       <li>An AI helper that reads a partner's spec sheet and sets up their rules</li>
     </ul>
   </div>
@@ -91,12 +91,12 @@
     <div>
       <div class="product-top"><span class="kind">TFS EDI Portal</span><span class="status">In development</span></div>
       <h2 class="mt-s">Every EDI file in one place, for you and your team</h2>
-      <p class="mt-m">Business Central keeps the business work. The portal keeps the files: every 850, 852, 855, 856 and 810 your company has sent or received, readable and searchable without opening BC.</p>
+      <p class="mt-m">Business Central keeps the business work. The portal keeps the files: every 850, 852, 855, 856, 810, 997, 820 and 812 your company has sent or received, readable and searchable without opening BC, with what needs attention at the top.</p>
       <p class="mt-s">Your team signs in with their Microsoft work accounts. There are no portal passwords, and your own admins choose who has access.</p>
       <div class="actions"><a class="btn btn-dark" href="https://portal.threefivesixtech.com">Client login</a><a class="btn btn-line" href="#contact" data-contact="edi">Ask about the portal</a></div>
     </div>
     <div>
-      <div class="features"><div class="feature" id="read-files-like-documents"><h3>Read files like documents</h3><p>Each file opens as the business document it stands for, with header, parties, lines and totals, and a warning when the file's own totals don't add up.</p></div><div class="feature" id="search-every-value"><h3>Search every value</h3><p>Find any PO number, UPC, store or control number across every file, the same way EDI Search works in BC.</p></div><div class="feature" id="sell-through-from-your-852s"><h3>Sell-through from your 852s</h3><p>Units sold, on hand and weeks of supply by item and store, week by week, with out-of-stock and no-sales lists.</p></div><div class="feature" id="files-arrive-on-their-own"><h3>Files arrive on their own</h3><p>Business Central sends new and changed files to the portal every few minutes, so both always agree.</p></div></div>
+      <div class="features"><div class="feature" id="read-files-like-documents"><h3>Read files like documents</h3><p>Each file opens as the business document it stands for, with header, parties, lines and totals, and a warning when the file's own totals don't add up.</p></div><div class="feature" id="search-every-value"><h3>Search every value</h3><p>Find any PO number, UPC, store or control number across every file, the same way EDI Search works in BC.</p></div><div class="feature" id="sell-through-from-your-852s"><h3>Sell-through from your 852s</h3><p>Units and dollars sold, on hand and weeks of supply by item and store, with out-of-stock and no-sales lists. View it by week, month, quarter, year, or your own accounting periods and fiscal year from BC. Daily 852s with store sales and warehouse stock roll up into weeks.</p></div><div class="feature" id="needs-attention"><h3>What needs attention, first</h3><p>Exceptions, rejected or missing 997s, late acknowledgments and ship notices, each explained in plain English with the fix. Every PO gets a timeline and an ordered, shipped and invoiced check.</p></div><div class="feature" id="payments-and-deductions"><h3>Payments and deductions</h3><p>820 remittances and 812 adjustments are matched to the invoices you sent, with deductions and short-pays tracked from new to resolved.</p></div><div class="feature" id="reports-as-pdf-or-excel"><h3>Reports as PDF or Excel</h3><p>Download sell-through, payments and deductions, and the monthly report as a formatted PDF or a real Excel workbook.</p></div><div class="feature" id="drop-files-in"><h3>Drop files in yourself</h3><p>Have files that didn't come through Business Central, like a batch of 852s from a retailer's website? Drag them into the portal. Duplicates are skipped and the newest file wins.</p></div><div class="feature" id="files-arrive-on-their-own"><h3>Files arrive on their own</h3><p>Business Central sends new and changed files to the portal every few minutes, so both always agree.</p></div></div>
     </div>
   </div>
 </div></section>
@@ -114,6 +114,7 @@
       <li><a href="/ai-guardrails/">AI Guardrails</a></li>
       <li><a href="/edi/">TFS EDI</a></li>
       <li><a href="/telemetry-monitor/">Telemetry Monitor</a></li>
+      <li><a href="/forecast-copilot/">Forecast Copilot</a></li>
       <li><a href="/ai-guardrails/planner">Permissions Planner</a></li>
     </ul></div>
     <div><h4>Work with us</h4><ul>
@@ -144,7 +145,7 @@
       <label><span>Company <em>(optional)</em></span><input name="company" autocomplete="organization" maxlength="160"></label>
     </div>
     <label><span>Email</span><input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@company.com"></label>
-    <label><span>What's it about?</span><select name="topic"><option value="project">A new project</option><option value="setup">Consulting and setup</option><option value="extension">Custom extension</option><option value="golive">Go-live data</option><option value="reporting">Reporting</option><option value="ai">AI for Business Central</option><option value="guardrails">AI Guardrails early access</option><option value="edi">TFS EDI early access</option><option value="telemetry">Telemetry Monitor early access</option><option value="support">Help with a problem (existing clients)</option><option value="other">Something else</option></select></label>
+    <label><span>What's it about?</span><select name="topic"><option value="project">A new project</option><option value="setup">Consulting and setup</option><option value="extension">Custom extension</option><option value="golive">Go-live data</option><option value="reporting">Reporting</option><option value="ai">AI for Business Central</option><option value="guardrails">AI Guardrails early access</option><option value="edi">TFS EDI early access</option><option value="telemetry">Telemetry Monitor early access</option><option value="forecast">Forecast Copilot early access</option><option value="support">Help with a problem (existing clients)</option><option value="other">Something else</option></select></label>
     <label><span>Message <em>(optional)</em></span><textarea name="message" maxlength="5000" placeholder="What's going on in Business Central?"></textarea></label>
     <label class="cf-hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
     <p class="cf-err" role="alert"></p>
