@@ -64,15 +64,15 @@
 </div></section>
 
 <section class="sec sec-alt"><div class="wrap">
-  <div class="features"><div class="feature" id="no-power-bi-no-kql"><h3>No Power BI, no KQL</h3><p>The queries are built in. Open the dashboard, pick a time range, read the recommendations.</p></div><div class="feature" id="a-connection-test-that-explains-itself"><h3>A connection test that explains itself</h3><p>Test Connection tells you if you're connected with data, connected with no data in the last 24 hours, or not connected, and why.</p></div><div class="feature" id="your-data-stays-in-azure"><h3>Your data stays in Azure</h3><p>It reads your telemetry on demand and doesn't copy it into Business Central. The client secret is kept in isolated storage, not in a table.</p></div><div class="feature" id="just-this-environment-or-all-of-them"><h3>Just this environment, or all of them</h3><p>By default it only counts telemetry from the environment you're in. Turn that off to see everything the resource receives.</p></div></div>
+  <div class="features"><div class="feature" id="drill-down"><h3>Drill into any signal <span class="status">In testing</span></h3><p>Open a signal to see what it means, how to fix it, and the top causes grouped by message, job, object or endpoint, each with a suggested fix. Each cause has the technical detail and AL stack trace for whoever maintains the code.</p></div><div class="feature" id="no-power-bi-no-kql"><h3>No Power BI, no KQL</h3><p>The queries are built in. Open the dashboard, pick a time range, read the recommendations.</p></div><div class="feature" id="a-connection-test-that-explains-itself"><h3>A connection test that explains itself</h3><p>Test Connection tells you if you're connected with data, connected with no data in the last 24 hours, or not connected, and why.</p></div><div class="feature" id="your-data-stays-in-azure"><h3>Your data stays in Azure</h3><p>It reads your telemetry on demand and doesn't copy it into Business Central. The client secret is kept in isolated storage, not in a table.</p></div><div class="feature" id="just-this-environment-or-all-of-them"><h3>Just this environment, or all of them</h3><p>By default it only counts telemetry from the environment you're in. Turn that off to see everything the resource receives.</p></div></div>
 </div></section>
 
 <section class="sec"><div class="wrap two">
   <div><h2>About 15 minutes to set up</h2>
   <p class="mt-m">You need admin access to the Azure portal and to Business Central. You'll send BC telemetry to an Application Insights resource (skip this if you already do), create an app registration with the Reader role, then paste four values into Telemetry Monitor Setup.</p>
   <div class="actions"><a class="btn btn-dark" href="/telemetry-monitor/setup">Follow the setup guide</a></div></div>
-  <div class="callout"><h3>Where it is today</h3><p>Version 1.0 is in testing. Planned next:</p>
-  <ul><li>Alerts to Teams or email when a threshold is crossed</li><li>Editable thresholds</li><li>Drill-down into the recent events behind a number</li><li>License and feature-adoption views</li></ul></div>
+  <div class="callout"><h3>Where it is today</h3><p>Version 1.0 is in testing. Also built and in testing: a faster dashboard that reads every signal in one query, and drill-down into each signal. Planned next:</p>
+  <ul><li>Alerts to Teams or email when a threshold is crossed</li><li>Editable thresholds</li><li>License and feature-adoption views</li></ul></div>
 </div></section>
 <section class="closing" id="contact"><div class="wrap"><div class="contact">
   <div><h2>Want to see what your telemetry says?</h2><p>If you already send telemetry to Application Insights, you can be looking at your dashboard in about 15 minutes. Email us for early access.</p></div>
@@ -88,6 +88,7 @@
       <li><a href="/ai-guardrails/">AI Guardrails</a></li>
       <li><a href="/edi/">TFS EDI</a></li>
       <li><a href="/telemetry-monitor/">Telemetry Monitor</a></li>
+      <li><a href="/forecast-copilot/">Forecast Copilot</a></li>
       <li><a href="/ai-guardrails/planner">Permissions Planner</a></li>
     </ul></div>
     <div><h4>Work with us</h4><ul>
@@ -118,7 +119,7 @@
       <label><span>Company <em>(optional)</em></span><input name="company" autocomplete="organization" maxlength="160"></label>
     </div>
     <label><span>Email</span><input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@company.com"></label>
-    <label><span>What's it about?</span><select name="topic"><option value="project">A new project</option><option value="setup">Consulting and setup</option><option value="extension">Custom extension</option><option value="golive">Go-live data</option><option value="reporting">Reporting</option><option value="ai">AI for Business Central</option><option value="guardrails">AI Guardrails early access</option><option value="edi">TFS EDI early access</option><option value="telemetry">Telemetry Monitor early access</option><option value="support">Help with a problem (existing clients)</option><option value="other">Something else</option></select></label>
+    <label><span>What's it about?</span><select name="topic"><option value="project">A new project</option><option value="setup">Consulting and setup</option><option value="extension">Custom extension</option><option value="golive">Go-live data</option><option value="reporting">Reporting</option><option value="ai">AI for Business Central</option><option value="guardrails">AI Guardrails early access</option><option value="edi">TFS EDI early access</option><option value="telemetry">Telemetry Monitor early access</option><option value="forecast">Forecast Copilot early access</option><option value="support">Help with a problem (existing clients)</option><option value="other">Something else</option></select></label>
     <label><span>Message <em>(optional)</em></span><textarea name="message" maxlength="5000" placeholder="What's going on in Business Central?"></textarea></label>
     <label class="cf-hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
     <p class="cf-err" role="alert"></p>
