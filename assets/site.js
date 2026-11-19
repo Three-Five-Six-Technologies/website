@@ -95,6 +95,14 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     els.forEach(function (el) { io.observe(el); });
   }
+  // Phones: show the sticky CTA once the hero is gone, hide it again at the contact section
+  var bar = document.querySelector('.mbar'), hero = document.querySelector('.hero'), end = document.getElementById('contact');
+  if (bar && hero && end && 'IntersectionObserver' in window) {
+    var past = false, atEnd = false;
+    function upd() { bar.classList.toggle('on', past && !atEnd); }
+    new IntersectionObserver(function (e) { past = !e[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function (e) { atEnd = e[0].isIntersecting; upd(); }).observe(end);
+  }
   // EDI example: point at a sales order field to light up its source in the 850
   document.querySelectorAll('.snip.edi tr[data-k]').forEach(function (tr) {
     var hits = tr.closest('.snip').querySelectorAll('.hit[data-k="' + tr.dataset.k + '"]');
