@@ -30,10 +30,18 @@
 </div></header>
 <main id="main">
 
-<section class="hero"><div class="wrap hero-grid">
-  <div class="margin">
-    <h1><span class="h-a">Permissions, EDI, and what broke overnight.</span> <span class="h-b">Fixed inside Business Central.</span></h1>
-    <p class="lead">Apps that run inside Microsoft Dynamics 365 Business Central, AI set up safely, and consulting when something needs fixing.</p>
+<section class="hero">
+<div class="strip" aria-label="About this studio"><div class="wrap">
+  <span class="label"><i class="dot" aria-hidden="true"></i>Business Central, after hours</span>
+  <span class="label hide-s">Utah &middot; Mountain Time</span>
+  <span class="label">Local time <b data-mt-clock>&mdash;</b></span>
+  <span class="label hide-s">Built and tested in a sandbox</span>
+</div></div>
+<div class="wrap hero-grid">
+  <div>
+    <span class="label rule"><span class="n">356</span> Apps &amp; consulting for Dynamics 365 Business Central</span>
+    <h1>Permissions, EDI, and what broke <span class="s">overnight.</span></h1>
+    <p class="lead">Fixed inside Business Central. Apps that run in the system you already use, AI set up safely, and consulting when something needs fixing.</p>
     <div class="actions">
       <a class="btn btn-primary" href="#contact" data-contact="project">Talk to us about your BC</a>
       <a class="btn btn-ghost" href="#apps">See the apps</a>
@@ -44,19 +52,21 @@
     <div class="log-head"><b>Wednesday in Business Central</b><span>Example data</span></div>
     <ol aria-label="Example activity from the three apps. Each line links to how it works."><li style="--i:0"><a href="/edi/#documents"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">850 in: PO 4500123456, 3 lines</span></a></li><li style="--i:1"><a href="/edi/#units-that-make-sense"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">Sales order SO-1042 <ins>created</ins></span></a></li><li style="--i:2"><a href="/telemetry-monitor/#signals"><time>06:40</time><span class="app">Telemetry</span><span class="msg">Job queue failures: 3 in 24h, <em>warning</em></span></a></li><li style="--i:3"><a href="/ai-guardrails/#protected-fields"><time>07:15</time><span class="app">Guardrails</span><span class="msg"><strong>Blocked</strong>: vendor bank change by D.PARK</span></a></li><li style="--i:4"><a href="/ai-guardrails/#temporary-access-that-removes-itself"><time>09:10</time><span class="app">Guardrails</span><span class="msg">Temporary access: 4h for M.REYES, <ins>approved</ins></span></a></li><li style="--i:5"><a href="/edi/#documents"><time>11:30</time><span class="app">TFS EDI</span><span class="msg">855 <ins>sent</ins>: 2 lines accepted, 1 changed</span></a></li><li style="--i:6"><a href="/edi/#documents"><time>14:05</time><span class="app">TFS EDI</span><span class="msg">856 ready: shipment SH-2201, 4 cartons</span></a></li><li style="--i:7"><a href="/edi/#documents"><time>14:06</time><span class="app">TFS EDI</span><span class="msg">810 <em>held</em> until the 856 is sent</span></a></li></ol>
   </div>
-  <figcaption class="log-cap">A morning with all three apps installed. Select any line to see how it works.</figcaption>
+  <figcaption class="log-cap"><b>Fig. 1</b>A Wednesday with all three apps installed. Select any line to see how it works.</figcaption>
 </figure>
-</div></section>
+</div><div class="grain" aria-hidden="true"></div></section>
+<div class="dawn" aria-hidden="true"><span class="label">06:00 MT &middot; Morning in Business Central</span></div>
 
 <section class="sec" id="apps"><div class="wrap">
-  <div class="sec-head">
-    <h2>Three apps that work inside Business Central</h2>
+  <div class="sec-head rv">
+    <span class="label rule"><span class="n">01</span> The apps</span>
+    <h2>Three apps that work <span class="s">inside</span> Business Central</h2>
     <p>Each one uses BC's own pages, permissions and job queue, so there's nothing new for your team to log into. All three are in development and tested in a sandbox. Early access is open.</p>
   </div>
   <div class="products">
-    <article class="product gr">
+    <article class="product rv gr">
       <div class="product-copy">
-        <div class="product-top"><span class="kind">Security and permissions</span><span class="status">In development</span></div>
+        <div class="product-top"><span class="idx">01 / 03</span><span class="kind">Security and permissions</span><span class="status">In development</span></div>
         <h3>AI Guardrails</h3>
         <p>Business Central permissions without the spreadsheet. It suggests a role for each person from what they actually post, checks they can still do their job, and lets you try the new access for a day before it sticks.</p>
         <ul>
@@ -77,11 +87,11 @@
       <tr><td>S. Ortiz</td><td>Viewer</td><td class="dim">No postings in 90 days</td><td><span class="chip ok">Can do job</span></td></tr>
     </tbody>
   </table>
-</div></div>
+</div><p class="fig-cap"><b>Fig. 2</b>People Board: a suggested role for each person, and whether they can still do their job.</p></div>
     </article>
-    <article class="product edi">
+    <article class="product rv edi">
       <div class="product-copy">
-        <div class="product-top"><span class="kind">EDI</span><span class="status">In development</span></div>
+        <div class="product-top"><span class="idx">02 / 03</span><span class="kind">EDI</span><span class="status">In development</span></div>
         <h3>TFS EDI</h3>
         <p>EDI that lives in Business Central and tells you what went wrong in plain words. Purchase orders come in as sales orders; acknowledgments, ship notices and invoices go out when you release, ship and post.</p>
         <ul>
@@ -105,11 +115,11 @@
       <tr><td>Line 1: Item 1000</td><td>10 &times; 12PK</td><td class="dim">120 EA, sold in 12-packs</td></tr>
     </tbody>
   </table>
-</div></div>
+</div><p class="fig-cap"><b>Fig. 3</b>An incoming 850 becomes sales order SO-1042, with the source of each field.</p></div>
     </article>
-    <article class="product tm">
+    <article class="product rv tm">
       <div class="product-copy">
-        <div class="product-top"><span class="kind">System health</span><span class="status">In development</span></div>
+        <div class="product-top"><span class="idx">03 / 03</span><span class="kind">System health</span><span class="status">In development</span></div>
         <h3>Telemetry Monitor</h3>
         <p>Find out what broke overnight before your users tell you. It reads the telemetry Business Central already sends to Azure and turns it into a health dashboard with a next step for each problem.</p>
         <ul>
@@ -130,19 +140,20 @@
       <tr><td>Active users</td><td>23</td><td><span class="chip ok">OK</span></td></tr>
     </tbody>
   </table>
-</div></div>
+</div><p class="fig-cap"><b>Fig. 4</b>Telemetry dashboard: each signal, a count, and a plain-English next step.</p></div>
     </article>
   </div>
 </div></section>
 
 <section class="sec sec-alt" id="ai"><div class="wrap ai-grid">
   <div>
-    <h2>AI for Business Central, set up so your controller says yes</h2>
+    <span class="label rule"><span class="n">02</span> AI for Business Central</span>
+    <h2>AI for Business Central, set up so your controller says <span class="s">yes</span></h2>
     <p class="mt-m">We connect Claude to your Business Central and Microsoft 365 data with read-only access to start, give each role a few workflows they'll use on day one, and hand you the governance your auditor will ask about.</p>
     <p class="mt-s">Access runs on the same permission engine as AI Guardrails, so the AI only sees what it's supposed to.</p>
     <div class="actions"><a class="btn btn-dark" href="/ai/">How the AI setup works</a><a class="btn btn-line" href="#contact" data-contact="ai">Ask about a pilot</a></div>
   </div>
-  <ul class="asks" aria-label="Example questions people ask">
+  <ul class="asks rv" aria-label="Example questions people ask">
     <li><q>What's on order for Hillside Supply, and when does it ship?</q><span>Sales and customer service, read-only</span></li>
     <li><q>Which customers are past due? Draft a reminder for each.</q><span>Accounts receivable, drafts in Outlook for review</span></li>
     <li><q>What's below reorder point, and who did we last buy it from?</q><span>Purchasing, read-only</span></li>
@@ -151,31 +162,32 @@
 </div></section>
 
 <section class="sec" id="services"><div class="wrap">
-  <div class="sec-head">
-    <h2>Consulting, for when something in BC isn't right</h2>
+  <div class="sec-head rv">
+    <span class="label rule"><span class="n">03</span> Consulting</span>
+    <h2>Consulting, for when something in BC <span class="s">isn't right</span></h2>
     <p>Hands-on Business Central help, scoped up front and built in a sandbox. Which of these sounds familiar?</p>
   </div>
   <div class="problems">
-    <div class="problem"><h3>Month-end drags because the setup underneath is messy.</h3>
+    <div class="problem rv"><h3>Month-end drags because the setup underneath is messy.</h3>
       <div><p>We review and clean up posting groups, item setup, units of measure and dimensions so your numbers stay right as you grow.</p>
       <p><a class="ask" href="#contact" data-contact="setup">Ask about a setup review</a></p></div></div>
-    <div class="problem"><h3>You need BC to do one thing it doesn't.</h3>
+    <div class="problem rv"><h3>You need BC to do one thing it doesn't.</h3>
       <div><p>Custom AL extensions: new fields, pages, reports and automations. Upgrade-safe, and built and tested in a sandbox before they go anywhere near production.</p>
       <p><a class="ask" href="#contact" data-contact="extension">Ask about an extension</a></p></div></div>
-    <div class="problem"><h3>You're about to go live and the data isn't ready.</h3>
+    <div class="problem rv"><h3>You're about to go live and the data isn't ready.</h3>
       <div><p>We help you decide how to set up customers, vendors and items, load them with configuration packages, and bring in opening balances, open payables, receivables and bank balances through journals.</p>
       <p><a class="ask" href="#contact" data-contact="golive">Ask about go-live data</a></p></div></div>
-    <div class="problem"><h3>Something broke and nobody knows why.</h3>
+    <div class="problem rv"><h3>Something broke and nobody knows why.</h3>
       <div><p>Posting errors, stuck job queues, broken processes. You get a clear explanation of what happened and a fix, not a ticket number.</p>
       <p><a class="ask" href="#contact" data-contact="support">Get help with a problem</a></p></div></div>
-    <div class="problem"><h3>Reports don't answer the question you actually have.</h3>
+    <div class="problem rv"><h3>Reports don't answer the question you actually have.</h3>
       <div><p>Custom reports and telemetry so you can see what's really happening: who's using what, what's slow, and what's failing.</p>
       <p><a class="ask" href="#contact" data-contact="reporting">Ask about reporting</a></p></div></div>
   </div>
 </div></section>
 
 <section class="sec sec-alt" id="how"><div class="wrap">
-  <div class="sec-head"><h2>How a project goes</h2><p>Low-risk from the first email to go-live.</p></div>
+  <div class="sec-head rv"><span class="label rule"><span class="n">04</span> Process</span><h2>How a project <span class="s">goes</span></h2><p>Low-risk from the first email to go-live.</p></div>
   <div class="steps">
     <div class="step"><h3>Tell us the problem</h3><p>A short email is enough. No forms, and no sales call required.</p></div>
     <div class="step"><h3>Get a clear plan</h3><p>Honest next steps and a fixed scope before any work starts.</p></div>
@@ -186,9 +198,11 @@
 
 <section class="sec" id="about"><div class="wrap about">
   <div>
-    <h2>Built for Business Central, and nothing else</h2>
+    <span class="label rule"><span class="n">05</span> About</span>
+    <h2>Built for Business Central, and <span class="s">nothing else</span></h2>
     <p class="mt-m">Three Five Six Technologies is a Utah company focused entirely on Microsoft Dynamics 365 Business Central. We build apps that run inside BC and help companies get more out of the system they already pay for.</p>
-    <p>You deal directly with the people building your fix. No account managers and no handoffs. Every change is built and tested in a sandbox before it touches your live company.</p>
+    <p>No account managers and no handoffs. Every change is built and tested in a sandbox before it touches your live company.</p>
+    <p class="pull">You deal directly with the people building your fix.</p>
   </div>
   <div class="facts">
     <div class="fact"><small>Focus</small><strong>Dynamics 365 Business Central</strong></div>
@@ -198,8 +212,9 @@
   </div>
 </div></section>
 
-<section class="closing" id="contact"><div class="wrap"><div class="contact">
-  <div><h2>What's the one thing bugging you in Business Central?</h2><p>A few sentences is plenty. We'll reply with what we'd do about it, whether that's a quick fix, an app, or a bigger project.</p></div>
+<section class="closing" id="contact"><div class="grain" aria-hidden="true"></div><div class="wrap"><div class="contact">
+  <div><span class="label rule"><span class="n">06</span> Contact</span>
+  <h2>What's the one thing bugging you in <span class="s">Business Central?</span></h2><p>A few sentences is plenty. We'll reply with what we'd do about it, whether that's a quick fix, an app, or a bigger project.</p></div>
   <div><a class="btn btn-primary" href="#contact" data-contact="project">Send us a message</a>
   <span class="addr">Prefer email? <a href="mailto:sales@threefivesixtech.com">sales@threefivesixtech.com</a></span></div>
 </div></div></section>

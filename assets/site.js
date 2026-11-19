@@ -84,3 +84,21 @@
       .finally(function () { send.disabled = false; send.textContent = 'Send message'; });
   });
 })();
+
+// Polish: quiet scroll reveal, and a live Mountain Time clock where a page asks for one.
+(function () {
+  var els = document.querySelectorAll('.rv');
+  if (els.length && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('rvjs');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+  var clk = document.querySelectorAll('[data-mt-clock]');
+  if (!clk.length) return;
+  var fmt;
+  try { fmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver', hour: 'numeric', minute: '2-digit' }); } catch (e) { return; }
+  function tick() { var t = fmt.format(new Date()); clk.forEach(function (c) { c.textContent = t; }); }
+  tick(); setInterval(tick, 30000);
+})();
