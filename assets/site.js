@@ -85,7 +85,7 @@
   });
 })();
 
-// Polish: quiet scroll reveal, and a live Mountain Time clock where a page asks for one.
+// Polish: quiet scroll reveal, and the EDI field-to-source highlight.
 (function () {
   var els = document.querySelectorAll('.rv');
   if (els.length && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -95,10 +95,11 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     els.forEach(function (el) { io.observe(el); });
   }
-  var clk = document.querySelectorAll('[data-mt-clock]');
-  if (!clk.length) return;
-  var fmt;
-  try { fmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver', hour: 'numeric', minute: '2-digit' }); } catch (e) { return; }
-  function tick() { var t = fmt.format(new Date()); clk.forEach(function (c) { c.textContent = t; }); }
-  tick(); setInterval(tick, 30000);
+  // EDI example: point at a sales order field to light up its source in the 850
+  document.querySelectorAll('.snip.edi tr[data-k]').forEach(function (tr) {
+    var hits = tr.closest('.snip').querySelectorAll('.hit[data-k="' + tr.dataset.k + '"]');
+    function on(v) { tr.classList.toggle('on', v); hits.forEach(function (h) { h.classList.toggle('on', v); }); }
+    tr.addEventListener('mouseenter', function () { on(true); });
+    tr.addEventListener('mouseleave', function () { on(false); });
+  });
 })();
