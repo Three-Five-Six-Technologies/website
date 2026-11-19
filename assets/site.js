@@ -84,3 +84,30 @@
       .finally(function () { send.disabled = false; send.textContent = 'Send message'; });
   });
 })();
+
+// Polish: quiet scroll reveal, and the EDI field-to-source highlight.
+(function () {
+  var els = document.querySelectorAll('.rv');
+  if (els.length && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('rvjs');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+  // Phones: show the sticky CTA once the hero is gone, hide it again at the contact section
+  var bar = document.querySelector('.mbar'), hero = document.querySelector('.hero'), end = document.getElementById('contact');
+  if (bar && hero && end && 'IntersectionObserver' in window) {
+    var past = false, atEnd = false;
+    function upd() { bar.classList.toggle('on', past && !atEnd); }
+    new IntersectionObserver(function (e) { past = !e[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function (e) { atEnd = e[0].isIntersecting; upd(); }).observe(end);
+  }
+  // EDI example: point at a sales order field to light up its source in the 850
+  document.querySelectorAll('.snip.edi tr[data-k]').forEach(function (tr) {
+    var hits = tr.closest('.snip').querySelectorAll('.hit[data-k="' + tr.dataset.k + '"]');
+    function on(v) { tr.classList.toggle('on', v); hits.forEach(function (h) { h.classList.toggle('on', v); }); }
+    tr.addEventListener('mouseenter', function () { on(true); });
+    tr.addEventListener('mouseleave', function () { on(false); });
+  });
+})();

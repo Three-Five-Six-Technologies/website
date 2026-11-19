@@ -30,41 +30,55 @@
 </div></header>
 <main id="main">
 
-<section class="hero"><div class="wrap hero-grid">
-  <div class="margin">
-    <h1><span class="h-a">Permissions, EDI, and what broke overnight.</span> <span class="h-b">Fixed inside Business Central.</span></h1>
-    <p class="lead">Apps that run inside Microsoft Dynamics 365 Business Central, AI set up safely, and consulting when something needs fixing.</p>
+<section class="hero">
+<div class="wrap hero-grid">
+  <div>
+    <a class="pill" href="#apps"><span class="pill-dot" aria-hidden="true"></span>Early access is open for all three apps <span aria-hidden="true">&rarr;</span></a>
+    <h1>Permissions, EDI, and what broke <span class="s">overnight.</span></h1>
+    <p class="lead">Fixed inside Business Central, with nothing new for your team to log into. Catch problems before your users do, lock down who can change what, and get EDI orders in without the guesswork.</p>
     <div class="actions">
       <a class="btn btn-primary" href="#contact" data-contact="project">Talk to us about your BC</a>
       <a class="btn btn-ghost" href="#apps">See the apps</a>
     </div>
+    <p class="assure"><span>No sales call required</span><span>Fixed scope before any work</span><span>Built in a sandbox</span></p>
   </div>
   <figure class="log-fig">
   <div class="log">
     <div class="log-head"><b>Wednesday in Business Central</b><span>Example data</span></div>
     <ol aria-label="Example activity from the three apps. Each line links to how it works."><li style="--i:0"><a href="/edi/#documents"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">850 in: PO 4500123456, 3 lines</span></a></li><li style="--i:1"><a href="/edi/#units-that-make-sense"><time>06:02</time><span class="app">TFS EDI</span><span class="msg">Sales order SO-1042 <ins>created</ins></span></a></li><li style="--i:2"><a href="/telemetry-monitor/#signals"><time>06:40</time><span class="app">Telemetry</span><span class="msg">Job queue failures: 3 in 24h, <em>warning</em></span></a></li><li style="--i:3"><a href="/ai-guardrails/#protected-fields"><time>07:15</time><span class="app">Guardrails</span><span class="msg"><strong>Blocked</strong>: vendor bank change by D.PARK</span></a></li><li style="--i:4"><a href="/ai-guardrails/#temporary-access-that-removes-itself"><time>09:10</time><span class="app">Guardrails</span><span class="msg">Temporary access: 4h for M.REYES, <ins>approved</ins></span></a></li><li style="--i:5"><a href="/edi/#documents"><time>11:30</time><span class="app">TFS EDI</span><span class="msg">855 <ins>sent</ins>: 2 lines accepted, 1 changed</span></a></li><li style="--i:6"><a href="/edi/#documents"><time>14:05</time><span class="app">TFS EDI</span><span class="msg">856 ready: shipment SH-2201, 4 cartons</span></a></li><li style="--i:7"><a href="/edi/#documents"><time>14:06</time><span class="app">TFS EDI</span><span class="msg">810 <em>held</em> until the 856 is sent</span></a></li></ol>
   </div>
-  <figcaption class="log-cap">A morning with all three apps installed. Select any line to see how it works.</figcaption>
+  <figcaption class="log-cap"><b>Fig. 1</b>A Wednesday with all three apps installed. Select any line to see how it works.</figcaption>
 </figure>
-</div></section>
+</div>
+<div class="wrap"><nav class="router" aria-label="Find the app for your problem">
+  <span class="label"><span class="n">&rarr;</span> Which one sounds like you?</span>
+  <div class="routes">
+    <a href="#guardrails"><small>&ldquo;Our permissions are a spreadsheet nobody trusts.&rdquo;</small><b>AI Guardrails</b><span>Roles from what people actually post, with rollback to exactly how it was.</span></a>
+    <a href="#edi"><small>&ldquo;EDI orders fail and nobody can tell us why.&rdquo;</small><b>TFS EDI</b><span>Errors in plain words, and a worklist to fix and reprocess them.</span></a>
+    <a href="#telemetry"><small>&ldquo;Our users find the problems before we do.&rdquo;</small><b>Telemetry Monitor</b><span>A health dashboard with the next step for every problem.</span></a>
+  </div>
+</nav></div>
+<div class="grain" aria-hidden="true"></div></section>
 
 <section class="sec" id="apps"><div class="wrap">
-  <div class="sec-head">
+  <div class="sec-head rv">
+    <span class="label rule"><span class="n">01</span> The apps</span>
     <h2>Three apps that work inside Business Central</h2>
     <p>Each one uses BC's own pages, permissions and job queue, so there's nothing new for your team to log into. All three are in development and tested in a sandbox. Early access is open.</p>
   </div>
   <div class="products">
-    <article class="product gr">
+    <article class="product rv gr" id="guardrails">
       <div class="product-copy">
-        <div class="product-top"><span class="kind">Security and permissions</span><span class="status">In development</span></div>
+        <div class="product-top"><span class="idx">01 / 03</span><span class="kind">Security and permissions</span><span class="status">In development</span></div>
         <h3>AI Guardrails</h3>
-        <p>Business Central permissions without the spreadsheet. It suggests a role for each person from what they actually post, checks they can still do their job, and lets you try the new access for a day before it sticks.</p>
+        <p class="outcome">Least-privilege access without the spreadsheet project.</p>
+        <p>It suggests a role for each person from what they actually post, checks they can still do their job, and lets you try the new access for a day before it sticks.</p>
         <ul>
           <li>Roll back any change to exactly how access was before</li>
           <li>Protect fields like vendor bank details and credit limits on every page, API and Excel edit</li>
           <li>Auditor-ready reports, access reviews and temporary access that removes itself</li>
         </ul>
-        <a class="more" href="/ai-guardrails/">How AI Guardrails works</a>
+        <div class="p-actions"><a class="btn btn-dark" href="#contact" data-contact="guardrails">Request early access</a><a class="more" href="/ai-guardrails/">How AI Guardrails works</a></div>
       </div>
       <div class="desk"><div class="snip gr" role="img" aria-label="Example of the AI Guardrails People Board: each person, their suggested role, and whether they can still do their job.">
   <div class="snip-head"><b>People Board</b><span>Example data</span></div>
@@ -77,47 +91,49 @@
       <tr><td>S. Ortiz</td><td>Viewer</td><td class="dim">No postings in 90 days</td><td><span class="chip ok">Can do job</span></td></tr>
     </tbody>
   </table>
-</div></div>
+</div><p class="fig-cap"><b>Fig. 2</b>People Board: a suggested role for each person, and whether they can still do their job.</p></div>
     </article>
-    <article class="product edi">
+    <article class="product rv edi" id="edi">
       <div class="product-copy">
-        <div class="product-top"><span class="kind">EDI</span><span class="status">In development</span></div>
+        <div class="product-top"><span class="idx">02 / 03</span><span class="kind">EDI</span><span class="status">In development</span></div>
         <h3>TFS EDI</h3>
+        <p class="outcome">Know why an order failed, and fix it from one worklist.</p>
         <p>EDI that lives in Business Central and tells you what went wrong in plain words. Purchase orders come in as sales orders; acknowledgments, ship notices and invoices go out when you release, ship and post.</p>
         <ul>
           <li>Per-partner rules instead of custom code: units, item references, dates, duplicates</li>
           <li>An exceptions worklist with Fix, Reprocess and Process Anyway</li>
           <li>Search any value in any file: PO, UPC, store number, control number</li>
         </ul>
-        <a class="more" href="/edi/">How TFS EDI works</a>
+        <div class="p-actions"><a class="btn btn-dark" href="#contact" data-contact="edi">Request early access</a><a class="more" href="/edi/">How TFS EDI works</a></div>
       </div>
       <div class="desk"><div class="snip edi" role="img" aria-label="Example of TFS EDI turning an incoming 850 purchase order file into a Business Central sales order.">
   <div class="snip-head"><b>Transaction 850 in</b><span>Example data</span></div>
-  <div class="x12"><span class="seg">BEG</span>*00*SA*<span class="hit">4500123456</span>**20261112
-<span class="seg">DTM</span>*002*<span class="hit">20261118</span>
-<span class="seg">PO1</span>*001*<span class="hit">120*EA</span>*15.99*PE*VN*<span class="hit">PROD-12345</span>
+  <div class="x12"><span class="seg">BEG</span>*00*SA*<span class="hit" data-k="po">4500123456</span>**20261112
+<span class="seg">DTM</span>*002*<span class="hit" data-k="dt">20261118</span>
+<span class="seg">PO1</span>*001*<span class="hit" data-k="ln">120*EA</span>*15.99*PE*VN*<span class="hit" data-k="ln">PROD-12345</span>
 <span class="seg">PO1</span>*002*50*EA*29.99*PE*VN*PROD-67890</div>
   <table>
     <thead><tr><th>Sales order SO-1042</th><th>Value</th><th>From</th></tr></thead>
     <tbody>
-      <tr><td>External Document No.</td><td>4500123456</td><td class="dim">BEG03</td></tr>
-      <tr><td>Requested Delivery Date</td><td>11/18/2026</td><td class="dim">DTM 002</td></tr>
-      <tr><td>Line 1: Item 1000</td><td>10 &times; 12PK</td><td class="dim">120 EA, sold in 12-packs</td></tr>
+      <tr data-k="po"><td>External Document No.</td><td>4500123456</td><td class="dim">BEG03</td></tr>
+      <tr data-k="dt"><td>Requested Delivery Date</td><td>11/18/2026</td><td class="dim">DTM 002</td></tr>
+      <tr data-k="ln"><td>Line 1: Item 1000</td><td>10 &times; 12PK</td><td class="dim">120 EA, sold in 12-packs</td></tr>
     </tbody>
   </table>
-</div></div>
+</div><p class="fig-cap"><b>Fig. 3</b>An incoming 850 becomes sales order SO-1042. Point at a row to see where it came from.</p></div>
     </article>
-    <article class="product tm">
+    <article class="product rv tm" id="telemetry">
       <div class="product-copy">
-        <div class="product-top"><span class="kind">System health</span><span class="status">In development</span></div>
+        <div class="product-top"><span class="idx">03 / 03</span><span class="kind">System health</span><span class="status">In development</span></div>
         <h3>Telemetry Monitor</h3>
-        <p>Find out what broke overnight before your users tell you. It reads the telemetry Business Central already sends to Azure and turns it into a health dashboard with a next step for each problem.</p>
+        <p class="outcome">Know what broke overnight before your users tell you.</p>
+        <p>It reads the telemetry Business Central already sends to Azure and turns it into a health dashboard with a next step for each problem.</p>
         <ul>
           <li>Errors, lock timeouts, slow code, job queue failures and broken integrations</li>
           <li>No Power BI license and no KQL</li>
           <li>About 15 minutes to connect, with a built-in connection test</li>
         </ul>
-        <a class="more" href="/telemetry-monitor/">How Telemetry Monitor works</a>
+        <div class="p-actions"><a class="btn btn-dark" href="#contact" data-contact="telemetry">Request early access</a><a class="more" href="/telemetry-monitor/">How Telemetry Monitor works</a></div>
       </div>
       <div class="desk"><div class="snip tm" role="img" aria-label="Example of the Telemetry Monitor dashboard: each signal with a count, a status and a plain-English next step.">
   <div class="snip-head"><b>Telemetry Dashboard</b><span>Last 24 hours, example data</span></div>
@@ -130,19 +146,32 @@
       <tr><td>Active users</td><td>23</td><td><span class="chip ok">OK</span></td></tr>
     </tbody>
   </table>
-</div></div>
+</div><p class="fig-cap"><b>Fig. 4</b>Telemetry dashboard: each signal, a count, and a plain-English next step.</p></div>
     </article>
   </div>
 </div></section>
 
-<section class="sec sec-alt" id="ai"><div class="wrap ai-grid">
+
+<section class="specs" aria-label="The apps in numbers"><div class="wrap">
+  <div class="spec rv"><strong>0</strong><span>new logins. Every app runs on BC's own pages, permissions and job queue.</span></div>
+  <div class="spec rv"><strong>4</strong><span>EDI documents handled end to end: the 850 in, and the 855, 856 and 810 out.</span></div>
+  <div class="spec rv"><strong>~15<small>min</small></strong><span>to connect Telemetry Monitor, with a built-in connection test.</span></div>
+  <div class="spec rv"><strong>1<small>day</small></strong><span>to try new permissions in AI Guardrails before they stick.</span></div>
+</div></section>
+
+<section class="sec" id="ai"><div class="wrap ai-grid">
   <div>
+    <span class="label rule"><span class="n">02</span> AI for Business Central</span>
     <h2>AI for Business Central, set up so your controller says yes</h2>
-    <p class="mt-m">We connect Claude to your Business Central and Microsoft 365 data with read-only access to start, give each role a few workflows they'll use on day one, and hand you the governance your auditor will ask about.</p>
+    <ul class="gets">
+      <li><b>Read-only to start</b><span>Claude connected to your Business Central and Microsoft 365 data.</span></li>
+      <li><b>Useful on day one</b><span>A few workflows for each role, ready when they log in.</span></li>
+      <li><b>Auditor-ready</b><span>The governance your auditor will ask about, handed over.</span></li>
+    </ul>
     <p class="mt-s">Access runs on the same permission engine as AI Guardrails, so the AI only sees what it's supposed to.</p>
-    <div class="actions"><a class="btn btn-dark" href="/ai/">How the AI setup works</a><a class="btn btn-line" href="#contact" data-contact="ai">Ask about a pilot</a></div>
+    <div class="actions"><a class="btn btn-dark" href="#contact" data-contact="ai">Ask about a pilot</a><a class="btn btn-line" href="/ai/">How the AI setup works</a></div>
   </div>
-  <ul class="asks" aria-label="Example questions people ask">
+  <ul class="asks rv" aria-label="Example questions people ask">
     <li><q>What's on order for Hillside Supply, and when does it ship?</q><span>Sales and customer service, read-only</span></li>
     <li><q>Which customers are past due? Draft a reminder for each.</q><span>Accounts receivable, drafts in Outlook for review</span></li>
     <li><q>What's below reorder point, and who did we last buy it from?</q><span>Purchasing, read-only</span></li>
@@ -150,45 +179,29 @@
   </ul>
 </div></section>
 
-<section class="sec" id="services"><div class="wrap">
-  <div class="sec-head">
+<section class="sec sec-alt" id="services"><div class="wrap">
+  <div class="sec-head rv">
+    <span class="label rule"><span class="n">03</span> Consulting</span>
     <h2>Consulting, for when something in BC isn't right</h2>
-    <p>Hands-on Business Central help, scoped up front and built in a sandbox. Which of these sounds familiar?</p>
+    <p>A short email starts it. You get a fixed scope before any work, it's built and tested in a sandbox, and we go live with you.</p>
   </div>
-  <div class="problems">
-    <div class="problem"><h3>Month-end drags because the setup underneath is messy.</h3>
-      <div><p>We review and clean up posting groups, item setup, units of measure and dimensions so your numbers stay right as you grow.</p>
-      <p><a class="ask" href="#contact" data-contact="setup">Ask about a setup review</a></p></div></div>
-    <div class="problem"><h3>You need BC to do one thing it doesn't.</h3>
-      <div><p>Custom AL extensions: new fields, pages, reports and automations. Upgrade-safe, and built and tested in a sandbox before they go anywhere near production.</p>
-      <p><a class="ask" href="#contact" data-contact="extension">Ask about an extension</a></p></div></div>
-    <div class="problem"><h3>You're about to go live and the data isn't ready.</h3>
-      <div><p>We help you decide how to set up customers, vendors and items, load them with configuration packages, and bring in opening balances, open payables, receivables and bank balances through journals.</p>
-      <p><a class="ask" href="#contact" data-contact="golive">Ask about go-live data</a></p></div></div>
-    <div class="problem"><h3>Something broke and nobody knows why.</h3>
-      <div><p>Posting errors, stuck job queues, broken processes. You get a clear explanation of what happened and a fix, not a ticket number.</p>
-      <p><a class="ask" href="#contact" data-contact="support">Get help with a problem</a></p></div></div>
-    <div class="problem"><h3>Reports don't answer the question you actually have.</h3>
-      <div><p>Custom reports and telemetry so you can see what's really happening: who's using what, what's slow, and what's failing.</p>
-      <p><a class="ask" href="#contact" data-contact="reporting">Ask about reporting</a></p></div></div>
-  </div>
-</div></section>
-
-<section class="sec sec-alt" id="how"><div class="wrap">
-  <div class="sec-head"><h2>How a project goes</h2><p>Low-risk from the first email to go-live.</p></div>
-  <div class="steps">
-    <div class="step"><h3>Tell us the problem</h3><p>A short email is enough. No forms, and no sales call required.</p></div>
-    <div class="step"><h3>Get a clear plan</h3><p>Honest next steps and a fixed scope before any work starts.</p></div>
-    <div class="step"><h3>We build it in a sandbox</h3><p>Changes are built and tested away from your live company.</p></div>
-    <div class="step"><h3>Go live together</h3><p>Moved to production with you, with support if anything comes up.</p></div>
+  <div class="jobs">
+    <a class="job rv" href="#contact" data-contact="setup"><h3>Month-end drags because the setup underneath is messy.</h3><p>Posting groups, items, units of measure and dimensions, cleaned up so the numbers stay right.</p><span class="go">Setup review</span></a>
+    <a class="job rv" href="#contact" data-contact="extension"><h3>You need BC to do one thing it doesn't.</h3><p>Custom AL extensions: fields, pages, reports and automations. Upgrade-safe.</p><span class="go">Custom extension</span></a>
+    <a class="job rv" href="#contact" data-contact="golive"><h3>You're about to go live and the data isn't ready.</h3><p>Customers, vendors, items and opening balances, loaded with configuration packages and journals.</p><span class="go">Go-live data</span></a>
+    <a class="job rv" href="#contact" data-contact="support"><h3>Something broke and nobody knows why.</h3><p>Posting errors and stuck job queues, explained and fixed. Not a ticket number.</p><span class="go">Get help</span></a>
+    <a class="job rv" href="#contact" data-contact="reporting"><h3>Reports don't answer the question you have.</h3><p>Custom reports and telemetry: who's using what, what's slow, what's failing.</p><span class="go">Reporting</span></a>
+    <a class="job job-dark rv" href="#contact" data-contact="project"><h3>Something else in Business Central?</h3><p>A few sentences is plenty. We'll tell you what we'd do about it.</p><span class="go">Send a message</span></a>
   </div>
 </div></section>
 
 <section class="sec" id="about"><div class="wrap about">
   <div>
+    <span class="label rule"><span class="n">04</span> About</span>
     <h2>Built for Business Central, and nothing else</h2>
     <p class="mt-m">Three Five Six Technologies is a Utah company focused entirely on Microsoft Dynamics 365 Business Central. We build apps that run inside BC and help companies get more out of the system they already pay for.</p>
-    <p>You deal directly with the people building your fix. No account managers and no handoffs. Every change is built and tested in a sandbox before it touches your live company.</p>
+    <p>No account managers and no handoffs. Every change is built and tested in a sandbox before it touches your live company.</p>
+    <p class="pull">You deal directly with the people building your fix.</p>
   </div>
   <div class="facts">
     <div class="fact"><small>Focus</small><strong>Dynamics 365 Business Central</strong></div>
@@ -198,13 +211,16 @@
   </div>
 </div></section>
 
-<section class="closing" id="contact"><div class="wrap"><div class="contact">
-  <div><h2>What's the one thing bugging you in Business Central?</h2><p>A few sentences is plenty. We'll reply with what we'd do about it, whether that's a quick fix, an app, or a bigger project.</p></div>
+<section class="closing" id="contact"><div class="grain" aria-hidden="true"></div><div class="wrap"><div class="contact">
+  <div><span class="label rule"><span class="n">05</span> Contact</span>
+  <h2>What's the one thing bugging you in <span class="s">Business Central?</span></h2><p>A few sentences is plenty. We'll reply with what we'd do about it, whether that's a quick fix, an app, or a bigger project.</p></div>
   <div><a class="btn btn-primary" href="#contact" data-contact="project">Send us a message</a>
-  <span class="addr">Prefer email? <a href="mailto:sales@threefivesixtech.com">sales@threefivesixtech.com</a></span></div>
+  <span class="addr">Prefer email? <a href="mailto:sales@threefivesixtech.com">sales@threefivesixtech.com</a></span>
+  <ul class="promise"><li>No forms to fill in beyond your email, and no sales call</li><li>A fixed scope and honest next steps before any work</li><li>You talk to the person building your fix</li></ul></div>
 </div></div></section>
 
 </main>
+<div class="mbar" aria-hidden="true"><a class="btn btn-primary" href="#contact" data-contact="project" tabindex="-1">Talk to us about your BC</a></div>
 <footer class="foot"><div class="wrap">
   <div class="foot-grid">
     <div class="foot-brand"><a href="/" class="brand" aria-label="Three Five Six Technologies home"><svg xmlns="http://www.w3.org/2000/svg" class="wordmark" aria-hidden="true" viewBox="-1.0 20.6 602.6 82.4"><path d="M35.05859375 45.41015625H25.244140625V32.421875H8.203125V45.41015625H0.9765625V58.056640625H8.203125V84.814453125C8.203125 95.21484375 14.306640625 100.78125 25.87890625 100.78125C29.1015625 100.78125 32.71484375 100.439453125 36.5234375 99.365234375L34.326171875 86.962890625C33.3984375 87.20703125 30.76171875 87.548828125 29.58984375 87.548828125C26.513671875 87.548828125 25.244140625 86.181640625 25.244140625 83.30078125V58.056640625H35.05859375ZM58.83984375 68.84765625C58.83984375 62.5 62.599609375 58.740234375 68.166015625 58.740234375C73.732421875 58.740234375 77.052734375 62.40234375 77.052734375 68.5546875V100.0H94.09375V65.234375C94.09375 52.880859375 86.623046875 44.7265625 75.197265625 44.7265625C66.701171875 44.7265625 61.427734375 49.21875 58.498046875 56.25V27.24609375H41.798828125V100.0H58.83984375ZM103.32421875 100.0H120.365234375V70.21484375C120.365234375 63.671875 125.00390625 59.27734375 131.302734375 59.27734375C133.353515625 59.27734375 136.4296875 59.619140625 138.041015625 60.15625V45.3125C136.625 44.970703125 134.818359375 44.7265625 133.20703125 44.7265625C127.201171875 44.7265625 122.416015625 48.193359375 120.462890625 55.37109375H119.876953125V45.41015625H103.32421875ZM168.755859375 101.025390625C181.98828125 101.025390625 190.923828125 95.01953125 193.658203125 85.546875L178.47265625 83.056640625C177.10546875 86.71875 173.638671875 88.671875 169.048828125 88.671875C162.603515625 88.671875 158.2578125 84.765625 157.96484375 76.85546875H194.439453125V72.55859375C194.439453125 54.541015625 183.453125 44.7265625 168.12109375 44.7265625C151.71484375 44.7265625 141.216796875 56.0546875 141.216796875 72.900390625C141.216796875 90.380859375 151.6171875 101.025390625 168.755859375 101.025390625ZM158.0625 66.943359375C158.697265625 60.9375 162.26171875 57.080078125 168.267578125 57.080078125C174.224609375 57.080078125 177.59375 60.7421875 178.27734375 66.943359375ZM226.814453125 101.025390625C240.046875 101.025390625 248.982421875 95.01953125 251.716796875 85.546875L236.53125 83.056640625C235.1640625 86.71875 231.697265625 88.671875 227.107421875 88.671875C220.662109375 88.671875 216.31640625 84.765625 216.0234375 76.85546875H252.498046875V72.55859375C252.498046875 54.541015625 241.51171875 44.7265625 226.1796875 44.7265625C209.7734375 44.7265625 199.275390625 56.0546875 199.275390625 72.900390625C199.275390625 90.380859375 209.67578125 101.025390625 226.814453125 101.025390625ZM216.12109375 66.943359375C216.755859375 60.9375 220.3203125 57.080078125 226.326171875 57.080078125C232.283203125 57.080078125 235.65234375 60.7421875 236.3359375 66.943359375ZM291.85546875 45.41015625H280.91796875V42.333984375C280.91796875 39.111328125 282.28515625 37.158203125 286.337890625 37.158203125C288.046875 37.158203125 290.0 37.5 291.26953125 37.841796875L294.00390625 25.390625C292.001953125 24.8046875 287.36328125 23.828125 282.529296875 23.828125C271.591796875 23.828125 263.974609375 29.98046875 263.974609375 42.48046875V45.41015625H254.794921875V58.056640625H263.974609375V100.0H280.91796875V58.056640625H291.85546875ZM298.400390625 100.0H315.44140625V45.41015625H298.400390625ZM306.896484375 39.013671875C311.779296875 39.013671875 315.734375 35.3515625 315.734375 30.810546875C315.734375 26.26953125 311.779296875 22.607421875 306.896484375 22.607421875C302.0625 22.607421875 298.107421875 26.26953125 298.107421875 30.810546875C298.107421875 35.3515625 302.0625 39.013671875 306.896484375 39.013671875ZM339.955078125 100.0H359.681640625L379.5546875 45.41015625H361.78125L353.7734375 72.119140625C352.30859375 77.05078125 351.185546875 81.982421875 350.111328125 87.255859375C348.98828125 81.982421875 347.81640625 77.001953125 346.302734375 72.119140625L338.1484375 45.41015625H320.1796875ZM409.68359375 101.025390625C422.916015625 101.025390625 431.8515625 95.01953125 434.5859375 85.546875L419.400390625 83.056640625C418.033203125 86.71875 414.56640625 88.671875 409.9765625 88.671875C403.53125 88.671875 399.185546875 84.765625 398.892578125 76.85546875H435.3671875V72.55859375C435.3671875 54.541015625 424.380859375 44.7265625 409.048828125 44.7265625C392.642578125 44.7265625 382.14453125 56.0546875 382.14453125 72.900390625C382.14453125 90.380859375 392.544921875 101.025390625 409.68359375 101.025390625ZM398.990234375 66.943359375C399.625 60.9375 403.189453125 57.080078125 409.1953125 57.080078125C415.15234375 57.080078125 418.521484375 60.7421875 419.205078125 66.943359375ZM465.30078125 101.025390625C480.193359375 101.025390625 490.88671875 93.798828125 490.88671875 82.568359375C490.88671875 74.658203125 485.662109375 69.873046875 474.822265625 67.822265625L464.373046875 65.869140625C459.685546875 64.94140625 458.220703125 63.232421875 458.220703125 61.03515625C458.220703125 58.251953125 461.443359375 56.4453125 465.544921875 56.4453125C470.134765625 56.4453125 473.259765625 58.59375 474.28515625 62.255859375L489.32421875 59.86328125C487.419921875 50.48828125 478.923828125 44.7265625 465.251953125 44.7265625C450.603515625 44.7265625 441.228515625 51.171875 441.228515625 62.060546875C441.228515625 70.41015625 446.599609375 75.732421875 457.390625 77.783203125L466.912109375 79.638671875C471.453125 80.56640625 473.6015625 81.982421875 473.6015625 84.521484375C473.6015625 87.3046875 470.720703125 89.0625 465.935546875 89.0625C460.125 89.0625 457.048828125 86.62109375 455.681640625 81.884765625L439.861328125 84.375C441.765625 94.82421875 451.3359375 101.025390625 465.30078125 101.025390625ZM497.626953125 100.0H514.66796875V45.41015625H497.626953125ZM506.123046875 39.013671875C511.005859375 39.013671875 514.9609375 35.3515625 514.9609375 30.810546875C514.9609375 26.26953125 511.005859375 22.607421875 506.123046875 22.607421875C501.2890625 22.607421875 497.333984375 26.26953125 497.333984375 30.810546875C497.333984375 35.3515625 501.2890625 39.013671875 506.123046875 39.013671875ZM519.943359375 100.0H537.66796875L542.84375 90.52734375C544.69921875 87.060546875 546.26171875 83.49609375 547.775390625 79.98046875C549.38671875 83.49609375 551.046875 87.060546875 552.90234375 90.52734375L558.17578125 100.0H576.14453125L559.0546875 72.0703125L575.412109375 45.41015625H557.638671875L553.244140625 53.22265625C551.33984375 56.640625 549.728515625 60.25390625 548.166015625 63.76953125C546.603515625 60.25390625 545.041015625 56.689453125 543.234375 53.22265625L539.03515625 45.41015625H520.96875L536.88671875 71.97265625Z" fill="#0f1b2d"/><rect x="583.2" y="83.7" width="16.4" height="16.4" rx="3.3" fill="#12b886"/></svg></a>
@@ -218,7 +234,6 @@
     <div><h4>Work with us</h4><ul>
       <li><a href="/ai/">AI for Business Central</a></li>
       <li><a href="/#services">Consulting</a></li>
-      <li><a href="/#how">How a project goes</a></li>
       <li><a href="/#contact" data-contact="project">Send us a message</a></li>
       <li><a href="mailto:sales@threefivesixtech.com">sales@threefivesixtech.com</a></li>
     </ul></div>
